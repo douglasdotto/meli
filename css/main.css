@@ -397,7 +397,7 @@ a:hover {
     }
 
     .img2 {
-        bottom: 6rem;
+        bottom: 4rem;
     }
 
     .abs-img1 {
@@ -430,6 +430,7 @@ a:hover {
     .img-title {
         font-size: 36px;
     }
+
     .img2 {
         position: relative;
         left: 3rem;
@@ -437,7 +438,7 @@ a:hover {
         bottom: 4.5rem;
     }
 
-    .abs-img1{
+    .abs-img1 {
         z-index: -1;
         bottom: 3.5rem;
         right: -4rem;
@@ -463,7 +464,8 @@ a:hover {
     }
 
     .img-title {
-        font-size: 68px;
+        font-size: 54px;
+        line-height: 50px;
     }
 
     .result {
@@ -485,19 +487,39 @@ a:hover {
 
     .img2 {
         position: relative;
+        left: 0px !important;
+        scale: 1 !important;
+        bottom: 0px !important;
+    }
+
+    /* .img2 {
+        position: relative;
         left: 0rem;
         scale: 1.2;
         top: -12rem;
+    } */
+
+    .abs-img1 {
+        z-index: -1;
+        bottom: 0px !important;
+        right: 0px !important;
+        max-width: 100% !important;
+        max-height: 211px;
+        scale: 1 !important;
     }
 
-    .abs-img1{
+    .img-ml {
+        max-width: 75% !important;
+    }
+
+    /* .abs-img1 {
         z-index: -1;
         bottom: 12rem;
         right: 0.4rem;
         max-width: 465px;
         max-height: 211px;
         scale: 1.4;
-    }
+    } */
 }
 
 @media (max-width: 768px) {
@@ -530,12 +552,12 @@ a:hover {
         text-align: center;
     }
 
-    .img2 {
+    /* .img2 {
         position: relative;
         top: -10rem;
-    }
+    } */
 
-    .abs-img1{
+    .abs-img1 {
         z-index: -1;
         bottom: 10rem;
         right: -3rem;
@@ -543,7 +565,7 @@ a:hover {
         /* max-height: 211px; */
         scale: 1;
     }
-    
+
 }
 
 @media (max-width: 576px) {
@@ -598,12 +620,12 @@ a:hover {
         text-align: center;
 
     }
-    
-    .img2 {
+
+    /* .img2 {
         position: relative;
         left: -2rem;
         scale: 1.3;
-    }
+    } */
 }
 
 @keyframes fadeIn {
