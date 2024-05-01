@@ -1,5 +1,19 @@
 /* Fonts */
 @font-face {
+    font-family: 'proxima_nova_thin';
+    src: url('../fonts/proxima-thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_regular';
+    src: url('../fonts/proxima-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'proxima_nova_semibold';
     src: url('../fonts/proxima-nova-semibold.otf') format('opentype');
     font-weight: normal;
@@ -40,7 +54,7 @@ html {
 
 /* Estilos gerais */
 body {
-    font-family: 'proxima_nova_semibold';
+    font-family: 'proxima_nova_regular';
     background-color: var(--primary);
 }
 
@@ -229,7 +243,6 @@ a:hover {
     font-weight: 400;
     line-height: 28px;
     text-align: left;
-
 }
 
 .text-p1-bold {
@@ -268,11 +281,17 @@ a:hover {
     /* Changes the cursor to a pointer on hover */
     outline: none;
     /* Removes outline */
+    padding: 25px;
+}
+
+.btn-black {
+    background-color: var(--text-primary) !important;
+    color: var(--secondary) !important;
 }
 
 .btn-true {
     border-color: var(--text-primary);
-    color: var(--confirmation-btn);
+    color: var(--text-primary);
     border-radius: 15px;
     border: 1px solid;
     border-color: var(--text-primary);
@@ -464,9 +483,10 @@ a:hover {
     }
 }
 
-.text-black {
+.text-explanation {
     margin-top: 10px !important;
     color: #000 !important;
-    font-size: 17px !important;
+    font-size: 18px !important;
     font-weight: 100 !important;
+    line-height: 22px !important;
 }
