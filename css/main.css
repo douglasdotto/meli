@@ -82,10 +82,10 @@ a:hover {
 
 /* Menu options section*/
 
-.menu-links {
+.menu-links a {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 16px;
 }
 
 .special-ad {
@@ -113,7 +113,7 @@ a:hover {
     /* Using the primary color variable defined in :root */
     color: var(--secondary);
     /* Optional: Using the secondary color for text */
-    font-size: 15px;
+    font-size: 18px;
     /* Optional: Increases the font size */
     text-align: center;
     /* Centers the text inside the div */
@@ -329,6 +329,42 @@ a:hover {
 }
 
 
+.text-explanation {
+    margin-top: 10px !important;
+    color: #000 !important;
+    font-size: 18px !important;
+    font-weight: 100 !important;
+    line-height: 22px !important;
+}
+
+.result {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    border: 1px solid var(--text-primary);
+    font-size: 16px;
+    padding: 40px;
+    position: relative;
+    padding-left: 100px;
+}
+
+.result-image {
+    position: absolute;
+    max-width: 325px;
+    left: -260px;
+    top: 20px;
+}
+
+.result-text-bold {
+    color: var(--text-primary);
+    font-size: 32px;
+    font-family: 'proxima_nova_black';
+}
+
+.result-text-span {
+    color: var(--text-primary);
+    font-size: 20px;
+    line-height: 22px;
+}
 
 /* Media Queries to adjust font size based on the width of the viewport */
 @media (max-width: 1400px) {
@@ -395,6 +431,17 @@ a:hover {
 
     .img-title {
         font-size: 27px;
+    }
+
+    .result {
+        padding-left: 40px !important;
+    }
+
+    .result-image {
+        position: relative !important;
+        max-width: 100% !important;
+        left: 0px !important;
+        top: 0px !important;
     }
 }
 
@@ -481,12 +528,4 @@ a:hover {
         text-align: center;
 
     }
-}
-
-.text-explanation {
-    margin-top: 10px !important;
-    color: #000 !important;
-    font-size: 18px !important;
-    font-weight: 100 !important;
-    line-height: 22px !important;
 }

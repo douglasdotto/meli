@@ -101,24 +101,24 @@
 
     <div class="container">
         <div class="row justify-content-center"> <!-- Added justify-content-center to center the content -->
-            <div class="d-flex justify-content-center align-items-center mb-5">
+            <div class="d-flex justify-content-center align-items-center">
                 <div id="quiz-index" class="quiz-counter px-4 py-1">
                     1/5
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="quiz-2">
             <div class="col-1"></div>
             <div id="quiz_question_wrapper"
-                class="col-10 d-flex flex-column justify-content-center text-center quiz-header ">
+                class="col-10 d-flex flex-column justify-content-center text-center quiz-header mt-5">
                 <h1 id="question-container" class="quiz-quest">MERCADO LIVRE É A EMPRESA DE TECNOLOGIA LÍDER NA AMÉRICA
                     LATINA 🤝</h1>
             </div>
             <div class="col-1"></div>
         </div>
-        <div class="row">
+        <div class="row" id="quiz">
             <div class="col-1"></div>
-            <div class="col-10 d-flex flex-column justify-content-center container my-5 mt-4">
+            <div class="col-10 d-flex flex-column justify-content-center my-5">
                 <div class="d-flex flex-column align-items-center">
                     <button class="custom-button my-2 py-3 btn-true" id="true-button">
                         <span class="d-flex justify-content-center text-button-true">
@@ -145,8 +145,59 @@
             </div>
             <div class="col-1"></div>
         </div>
-    </div>
 
+        <div class="row my-5" id="result-1" style="display: none">
+            <div class="col-0 col-md-4"></div>
+            <div class="col-12 col-md-7">
+                <div class="result">
+                    <div class="result-image">
+                        <img src="./images/caixa1.png" class="img-fluid" />
+                    </div>
+                    <h4 class="result-text-bold">ENTREGOU TUDO</h4>
+                    <span class="result-text-span">Parece que você está por dentro de tudo que o Mercado Livre vem
+                        construindo nesses 25 anos. Arrasou, ein? Ah, e se liga que o <strong>melhor tá
+                            chegando</strong>. Aproveite a variedade de produtos e descontos e compre com a entrega
+                        mais rápida do Brasil no app!</span>
+                </div>
+            </div>
+            <div class="col-0 col-md-1"></div>
+        </div>
+
+        <div class="row my-5" id="result-2" style="display: none">
+            <div class="col-0 col-md-4"></div>
+            <div class="col-12 col-md-7">
+                <div class="result">
+                    <div class="result-image">
+                        <img src="./images/caixa2.png" class="img-fluid" />
+                    </div>
+                    <h4 class="result-text-bold">TÁ NO CAMINHO</h4>
+                    <span class="result-text-span">Você conhece um pouco da história que o Mercado Livre vem
+                        escrevendo nesses 25 anos, mas pode apostar que o <strong>melhor tá chegando</strong>. Nunca
+                        é tarde para entregar e receber o que é bom e, claro, aproveitar a variedade de produtos e
+                        descontos com a entrega mais rápida do Brasil. Já baixou o app?!</span>
+                </div>
+            </div>
+            <div class="col-0 col-md-1"></div>
+        </div>
+
+        <div class="row my-5" id="result-3" style="display: none">
+            <div class="col-0 col-md-4"></div>
+            <div class="col-12 col-md-7">
+                <div class="result">
+                    <div class="result-image">
+                        <img src="./images/caixa3.png" class="img-fluid" />
+                    </div>
+                    <h4 class="result-text-bold">SEU MELHOR TÁ CHEGANDO</h4>
+                    <span class="result-text-span">Ficou surpreso com o quanto aprendeu sobre a história do Mercado
+                        Livre nesses 25 anos? A gente também! Mas ó, nunca é tarde para aprender mais e, claro, para
+                        receber o que é bom. Aproveite a variedade de produtos e descontos do Mercado Livre e compre
+                        com <strong>a entrega mais rápida do Brasil no app!</strong></span>
+                </div>
+            </div>
+            <div class="col-0 col-md-1"></div>
+        </div>
+    </div>
+    </div>
 
     <!-- Secondary body -->
     <div class="secondary-body py-5 position-relative" id="caldeirao">
@@ -157,7 +208,8 @@
                 <div class="col-md-5 d-flex flex-column justify-content-center">
 
                     <h1 class="video-text-header">O melhor já chegou no Caldeirão</h1>
-                    <p class="video-paragraph">Confira todas as <b class="video-paragraph-bold">novidades e surpresas do
+                    <p class="video-paragraph">Confira todas as <b class="video-paragraph-bold">novidades e
+                            surpresas do
                             Mercado Livre</b> no Caldeirão com Mion!</p>
                 </div>
                 <!-- Right side: Video player, title, and description, vertically centered -->

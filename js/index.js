@@ -30,6 +30,7 @@ let currentLevelIndex = 0;
 let score = 0;
 
 const quizIndex = document.getElementById('quiz-index');
+const quizQuestionWrapper = document.getElementById('quiz_question_wrapper');
 const questionContainer = document.getElementById('question-container');
 const explanationContainerTrue = document.getElementById('explanation-container-true');
 const explanationContainerFalse = document.getElementById('explanation-container-false');
@@ -71,7 +72,7 @@ function checkAnswer(answer) {
     const isCorrect = answer === currentLevel.answer;
 
     if (isCorrect)
-        score = +1;
+        score += 1;
 
     if (currentLevel.answer == 'verdade') {
         explanationContainerTrue.innerHTML = currentLevel.explanation;
@@ -108,7 +109,7 @@ function goToNextLevel() {
     if (currentLevelIndex < levels.length) {
         showQuestion();
     } else {
-        finish()
+        finish();
     }
 }
 
@@ -124,14 +125,32 @@ nextButton.addEventListener('click', () => {
     if (currentLevelIndex < levels.length) {
         goToNextLevel();
     } else {
-        finish()
+        finish();
     }
 });
+
+const quiz = document.getElementById('quiz');
+const quiz2 = document.getElementById('quiz-2');
+const result1 = document.getElementById('result-1');
+const result2 = document.getElementById('result-2');
+const result3 = document.getElementById('result-3');
 
 function finish() {
     trueButton.style.display = 'none';
     falseButton.style.display = 'none';
     nextButton.style.display = 'none';
+    quizQuestionWrapper.style.display = 'none';
+    questionContainer.style.display = 'none';
+
+    quiz.style.display = 'none';
+    quiz2.style.display = 'none';
+    if (score >= 0 && score < 2) {
+        result3.style.display = 'flex';
+    } else if (score >= 2 && score < 5) {
+        result2.style.display = 'flex';
+    } else if (score == 5) {
+        result1.style.display = 'flex';
+    }
     quizIndex.innerHTML = 'Resultado';
 }
 
