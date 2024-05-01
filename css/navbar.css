@@ -7,13 +7,13 @@
     background-color: var(--navbar_primary);
 }
 
-.navbar_title{
-    color: #FFFFFF;
+.navbar_title {
+    color: #FFFFFF !important;
     font-size: 28px;
     font-weight: 400;
 }
 
-.navbar_logo{
+.navbar_logo {
     max-width: 100px;
     max-height: 67px;
 }
