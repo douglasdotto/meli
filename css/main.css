@@ -323,11 +323,11 @@ a:hover {
 
 .btn-goToLink {
     background-color: var(--ml-text-color);
+    border: none;
     font-size: 24px;
     line-height: 24px;
     text-align: center;
     color: var(--secondary);
-    /* Keeps the text color of the second button black */
     border-radius: 40px;
     padding: 10px 60px;
 }
