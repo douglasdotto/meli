@@ -1,0 +1,411 @@
+/* Fonts */
+@font-face {
+    font-family: 'proxima_nova_semibold';
+    src: url('../fonts/proxima-nova-semibold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_black';
+    src: url('../fonts/proximanova-black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_nova_bold';
+    src: url('../fonts/proximanova-bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /*Gshow*/   
+    --gshow-primary: #FF6700;
+    --special-ad: #ffaa00;
+    --text-primary: #333333;
+    --confirmation-btn: #3AB7EA;
+    --footer: #F6F6F7;
+
+    /*Mercado Livre*/
+    --primary: #ffe30b;
+    --secondary: #FFFFFF;
+    --ml-text-color: #2D3277;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'proxima_nova_semibold';
+    background-color: var(--primary);
+}
+
+footer {
+    background-color: var(--footer);
+}
+
+.secondary-body {
+    background-color: var(--secondary);
+}
+
+a {
+    color: var(--text-primary); /* Sets the text color to the primary color variable defined in your CSS */
+    font-size: 1.2rem; /* Increases the font size */
+}
+
+a:hover {
+    color: var(--secondary); /* Changes the color on hover to the secondary color */
+    text-decoration: underline; /* Adds an underline on hover for better visibility */
+}
+
+/* Menu options section*/
+
+.menu-links {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.special-ad {
+    background-color: var(--special-ad); /* Using the primary color variable defined in :root */
+    color: var(--secondary); /* Optional: Using the secondary color for text */
+    font-size: 15px; /* Optional: Increases the font size */
+    text-align: center; /* Centers the text inside the div */
+}
+
+/* Quiz Section*/
+
+.quiz-header {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+}
+
+.quiz-counter {
+    background-color: var(--text-primary); /* Using the primary color variable defined in :root */
+    color: var(--secondary); /* Optional: Using the secondary color for text */
+    font-size: 15px; /* Optional: Increases the font size */
+    text-align: center; /* Centers the text inside the div */
+}
+
+.quiz-quest {
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+}
+
+/* Video Section*/
+
+.video-player {
+    border-radius: 30px;
+}
+
+.video_title {
+    font-family: 'proxima_nova_bold';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 28px;
+}
+
+.video-desc {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+
+.video-paragraph{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.video-paragraph-bold{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    font-family: 'proxima_nova_bold';
+}
+
+.video-text-header {
+    font-family: 'proxima_nova_bold';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+/* Images section*/
+
+.img2 {
+    position: relative;
+    left: 6rem; /* Adjust this value to shift more or less */
+}
+
+.img-title{
+    font-family: 'proxima_nova_bold';
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: left;
+    color: var(--ml-text-color);
+}
+
+.img-description {
+    font-family: 'proxima_nova_bold';
+    font-weight: 700;
+    font-size: 56.21px;
+    line-height: 56.21px;
+    color: var(--ml-text-color);
+    white-space: nowrap;
+}
+
+/*absolute images*/
+
+.abs-img1{
+    z-index: -1;
+    bottom: 70px;
+    right: -12px;
+    max-width: 465px;
+    max-height: 211px;
+}
+
+.abs-img2{
+    z-index: -1;
+    bottom: -23rem;
+    left: -7rem;
+    width: 100%;
+    height: 100%;
+    max-width: 211px;
+    max-height: 465px;
+}
+
+.abs-img3 {
+    left: 0;
+    bottom: 18rem;
+}
+
+.abs-img4{
+    z-index: 0;
+    bottom: -5rem;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    max-width: 211px;
+    max-height: 465px;
+}
+
+/* General Texts section*/
+
+.text-header1 {
+    font-family: 'proxima_nova_bold';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+}
+
+.text-p1 {
+    font-size: 22.7px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    
+}
+
+.text-p1-bold {
+    font-family: 'proxima_nova_bold';
+    font-size:  23.3px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+}
+
+.txt-header1 {
+    font-family: 'proxima_nova_bold';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+}
+
+.p01{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+/* Buttons Section*/
+
+.custom-button {
+    background-color: var(--secondary); /* Sets background color to white for both buttons */
+    border-color: var(--text-primary);
+    border-radius: 10px; /* Rounded corners */
+    border: solid;
+    font-size: 16px; /* Sets a font size */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    outline: none; /* Removes outline */
+}
+
+.btn-true {
+    border-color: var(--text-primary);
+    color: var(--confirmation-btn);
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: var(--text-primary);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.btn-false {
+    color: var(--text-primary); /* Keeps the text color of the second button black */
+    border-radius: 15px;
+    border: 1px solid;
+    border-color: var(--text-primary);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;    
+}
+.btn-goToLink {
+    background-color: var(--ml-text-color);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 54px;
+    text-align: center;
+    color: var(--secondary); /* Keeps the text color of the second button black */
+    border-radius: 40px;
+}
+
+
+
+/* Media Queries to adjust font size based on the width of the viewport */
+@media (max-width: 1400px) {
+    .text-header1 {
+        font-size: 40px; /* Smaller font-size for smaller devices */
+    }
+    .text-p1 {
+        font-size: 18.9px;
+    }
+    .text-p1-bold {
+        font-size: 19.5px;
+    }
+    .quiz-quest {
+        font-size: 24px;
+    }
+    .img-title {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .text-header1 {
+        font-size: 34px; /* Smaller font-size for smaller devices */
+    }
+    .text-p1 {
+        font-size: 16px;
+    }
+    .text-p1-bold {
+        font-size: 16.5px;
+    }
+    .quiz-quest {
+        font-size: 20px;
+    }
+    .img-title {
+        font-size: 36px;
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .text-header1 {
+        font-size: 26px; /* Even smaller font-size for tablets */
+    }
+    .text-p1 {
+        text-align: center;
+        font-size: 16px;
+    }
+    .text-p1-bold {
+        font-size: 16.5px;
+    }
+    .img-title {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-header1 {
+        font-size: 19px; /* Smaller font-size for mobile landscape */
+    }
+    .text-p1 {
+        font-size: 18.9px;
+    }
+    .text-p1-bold {
+        font-size: 18.5px;
+    }
+    .quiz-quest {
+        font-size: 19px;
+    }
+    .img-title {
+        font-size: 50px;
+    }
+    .video-text-header{
+        text-align: center;
+    }
+    .video-paragraph {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-header1 {
+        font-size: 19px; /* Smaller font-size for mobile portrait */
+    }
+    .text-p1 {
+        font-size: 18.9px;
+    }
+    .text-p1-bold {
+        font-size: 19.5px;
+    }
+    .video-text-header{
+        text-align: center;
+    }
+    .video-paragraph {
+        text-align: center;
+
+    }
+}
+
+@media (max-width: 530px) {
+    .text-header1 {
+        font-size: 18px; /* Smaller font-size for mobile portrait */
+        text-align: center;
+    }
+    .text-p1 {
+        font-size: 18.9px;
+    }
+    .text-p1-bold {
+        font-size: 19.5px;
+    }
+    .img-title {
+        text-align: center;
+        font-size: 46px;
+    }
+    .video-text-header{
+        text-align: center;
+    }
+    .video-paragraph {
+        text-align: center;
+
+    }
+}

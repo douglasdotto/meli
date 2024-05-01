@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercado Livre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/navbar.css"/>
+
+    <link rel="icon"
+    href="https://s2-gshow.glbimg.com/Pq0eOLQd7ZG8PR4k-GdgEwW3U5Q=/32x32/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/p/9/XoC4WKSauQcT37nqc9Ag/gshow-favicon-padrao-podcast-legado-20.png">
+
+</head>
+<body>  
+    
+    <div class="navbar">
+        <div class="container-fluid"> <!-- Changed to container-fluid for full width -->
+            <div class="row flex-grow-1">
+                <!-- Left column for the SVG logo -->
+                <div class="col d-flex">
+                    <a href="https://gshow.globo.com/" class="navbar_logo ms-5">
+                        <svg width="100%" height="100%" viewBox="0 0 115 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.7246 8.26948C20.3848 8.26948 20.7873 8.66326 20.7873 9.30907V24.2729C20.7873 33.1409 16.7619 37 9.46768 37C6.68205 37 3.44556 36.1337 0.70823 34.401C0.0963561 34.0072 -0.00025548 33.4559 0.305681 32.8416L1.62604 30.2899C1.93198 29.6914 2.59216 29.5496 3.17183 29.9434C5.37779 31.3295 7.29392 31.9281 9.32276 31.9281C13.1228 31.9281 15.3449 30.0694 15.3771 25.9583C14.2661 27.1239 12.366 28.258 9.88633 28.258C4.36337 28.258 -0.0163574 24.1941 -0.0163574 18.3031C-0.0163574 12.4121 4.6371 7.92295 10.0312 7.92295C12.2372 7.92295 14.4593 9.00979 15.6508 10.4274V9.30907C15.6508 8.66326 16.0534 8.26948 16.7136 8.26948H19.7246ZM15.4898 18.2559C15.4898 15.0583 13.1872 12.9319 10.4016 12.9319C7.61596 12.9319 5.26508 15.0583 5.26508 18.2559C5.26508 21.4534 7.61596 23.5798 10.4016 23.5798C13.1872 23.5798 15.4898 21.4219 15.4898 18.2559ZM23.4442 22.9813C23.2187 22.2882 23.6213 21.8629 24.3781 21.8629H27.8239C28.3552 21.8629 28.6612 22.0834 28.9671 22.556C29.4985 23.3751 30.2553 24.0209 32.3807 24.0209C34.1036 24.0209 35.2952 23.5483 35.2952 22.5875C35.2952 18.9174 23.2992 22.4142 23.2992 14.0187C23.2992 10.3487 26.5679 7.92295 31.7528 7.92295C36.4062 7.92295 39.2241 10.1754 40.2546 13.5934C40.48 14.3338 40.0775 14.759 39.3207 14.759H35.8265C35.2952 14.759 35.0698 14.5858 34.7155 14.0187C34.1358 13.1524 33.2985 12.5854 31.2214 12.5854C29.5468 12.5854 28.5646 13.2784 28.5646 14.0502C28.5646 17.295 40.641 14.0502 40.641 22.1779C40.641 26.1158 37.0181 28.6675 32.107 28.6675C26.8417 28.6675 24.4103 25.9425 23.4281 22.9498L23.4442 22.9813ZM61.2354 16.3972V27.2971C61.2354 27.943 60.8328 28.3367 60.1727 28.3367H56.904C56.2438 28.3367 55.8412 27.943 55.8412 27.2971V17.2635C55.8412 14.4125 54.7302 12.9319 52.3471 12.9319C49.964 12.9319 48.4988 14.6173 48.4988 17.4368V27.2971C48.4988 27.943 48.0962 28.3367 47.436 28.3367H44.1673C43.5072 28.3367 43.1046 27.943 43.1046 27.2971V1.03959C43.1046 0.393785 43.5072 0 44.1673 0H47.436C48.0962 0 48.4988 0.393785 48.4988 1.03959V10.0809C49.7386 8.82078 51.5903 7.92295 53.8929 7.92295C58.4981 7.92295 61.2354 11.089 61.2354 16.3972ZM63.6185 18.3031C63.6185 12.2861 68.4007 7.92295 74.1008 7.92295C79.8009 7.92295 84.5832 12.2861 84.5832 18.3031C84.5832 24.3201 79.8009 28.6833 74.1008 28.6833C68.4007 28.6833 63.6185 24.3201 63.6185 18.3031ZM80.7026 18.1298C80.7026 17.7046 80.3484 17.3895 79.9458 17.3895C79.5111 17.3895 79.189 17.6888 79.189 18.1298C79.189 20.9493 76.9348 23.2333 74.1008 23.2333C71.0898 23.2333 69.0126 20.9021 69.0126 18.1298C69.0126 17.7046 68.6584 17.3895 68.2558 17.3895C67.8533 17.3895 67.499 17.6888 67.499 18.1298C67.499 21.7684 70.4135 24.7139 74.0847 24.7139C77.756 24.7139 80.6704 21.8157 80.6704 18.1298H80.7026ZM114.05 8.26948C114.807 8.26948 115.161 8.74202 114.935 9.43508L108.913 27.4862C108.736 28.0532 108.301 28.3525 107.673 28.3525H104.485C103.873 28.3525 103.471 28.0532 103.294 27.4862L99.8478 15.4994L96.4825 27.4862C96.3054 28.0532 95.9029 28.3525 95.291 28.3525H92.1028C91.4909 28.3525 91.0401 28.0532 90.8629 27.4862L84.7603 9.43508C84.5349 8.74202 84.8891 8.26948 85.6459 8.26948H89.6231C90.235 8.26948 90.6375 8.56875 90.7663 9.18306L93.6808 20.7446L97.0461 9.18306C97.2232 8.61601 97.5775 8.26948 98.1893 8.26948H101.732C102.344 8.26948 102.714 8.56875 102.875 9.18306L106.192 20.7761L109.106 9.18306C109.235 8.5845 109.638 8.26948 110.25 8.26948H114.018H114.05Z" fill="white"/>
+                            </svg>
+                    </a>
+                </div>
+                <!-- Center column for the text, centered text using flex utilities -->
+                <div class="col d-flex justify-content-center align-items-center">
+                    <a style="text-decoration: none;" href="https://gshow.globo.com/realities/bbb/">
+                        <h4  class="navbar-title pt-2">MERCADO LIVRE</h4>
+                    </a>
+                </div>
+                <!-- Right column to balance the space (empty but takes space) -->
+                <div class="col d-flex justify-content-end"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex justify-content-center align-items-center my-5">
+        <div class="special-ad px-2">
+            ESPECIAL PUBLICITÁRIO
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <div class="d-inline-flex align-items-center justify-content-center menu-links">
+            <a href="#" class="me-4 text-decoration-none">Quiz</a>
+            <a href="#" class="text-decoration-none">Caldeirão com Mion</a>
+        </div>
+    </div>
+
+    <div class="ad-imgs container my-4 position-relative">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <!-- First Column: Image and Description, now vertically centered -->
+            <div class="col-md-5 d-flex flex-column justify-content-center">
+                <img class="img-fluid" src="./images/MercadoLivre01.png" alt="Description of the first image">
+                <h1 class="mt-5 img-title">O melhor tá chegando</h1>
+            </div>
+            <!-- Second Column: Only one Image -->
+            <div class="col-md-5 d-flex flex-column justify-content-center mb-5">                
+                <img class="img-fluid mb-5 img2" src="./images/MercadoLivre02_tst.png" alt="Description of the second image">
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <!--Positioned Absolutely -->
+        <img src="./images/malha01.png" class="position-absolute abs-img1">
+    </div>
+    <div class="mt-5"></div>
+    <div class="container my-5 position-relative">
+        <div class="row my-5">
+            <div class="col-1"></div>
+            <div class="col-10 d-flex flex-column justify-content-center text-center">
+                <h4 class="text-header1">Entregue o que você sabe sobre o Mercado Livre</h1>
+                <p class="text-p1">O Mercado Livre celebra seus 25 anos no Caldeirão com Mion e, acredite: tem muita história para contar. 
+                    <br>Mas agora é com você. <b class="text-p1-bold">Entrege o seu melhor e teste seus conhecimentos sobre a plataforma no quiz!</b></p>
+                    
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <!--Positioned Absolutely -->
+        <img src="./images/malha02.png" class="position-absolute abs-img2">
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center"> <!-- Added justify-content-center to center the content -->
+            <div class="d-flex justify-content-center align-items-center mb-5">
+                <div id="quiz-index" class="quiz-counter px-4 py-1">
+                    1/5
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div id="quiz_question_wrapper" class="col-10 d-flex flex-column justify-content-center text-center quiz-header ">
+                <h1 id="quiz_question" class="quiz-quest">MERCADO LIVRE É A EMPRESA DE TECNOLOGIA LÍDER NA AMÉRICA LATINA 🤝</h1>
+            </div>
+            <div class="col-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 d-flex flex-column justify-content-center container my-5 mt-4">
+                <div class="d-flex flex-column align-items-center">
+                    <button class="custom-button mb-2 mt-3 py-3 btn-true">VERDADE</button>
+                    <button class="custom-button mt-2 mb-5 py-3 btn-false">MITO</button>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+        
+
+    <!-- Secondary body -->
+    <div class="secondary-body py-5 position-relative">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-1"></div>
+                <!-- Left side: Text header and paragraph, vertically centered -->
+                <div class="col-md-5 d-flex flex-column justify-content-center">
+                   
+                    <h1 class="video-text-header">O melhor já chegou no Caldeirão</h1>
+                    <p class="video-paragraph">Confira todas as <b class="video-paragraph-bold">novidades e surpresas do Mercado Livre</b> no Caldeirão com Mion!</p>
+                </div>                
+                <!-- Right side: Video player, title, and description, vertically centered -->
+                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center">
+                    <div class="embed-responsive embed-responsive-16by9 mb-2">
+                        <iframe class="embed-responsive-item video-player" src="https://www.youtube.com/watch?v=PDdt4vsfJ9o" allowfullscreen></iframe>
+                    </div>                    
+                    <h1 class="video-title">Vídeo 1</h1>
+                    <p class="video-desc">Lorem ipsum.</p>
+                </div>               
+                <div class="col-1"></div>
+            </div>
+            <div class="container mt-5">
+                <div class="d-flex flex-column align-items-center">
+                    <button class="custom-button btn-goToLink">Vem conferir o melhor do Mercado Livre</button>
+                </div>
+            </div>            
+        </div>
+         <!--Positioned Absolutely -->
+         <img src="./images/Rectangle.png" class="position-absolute abs-img3">
+         <!--Positioned Absolutely -->
+         <img src="./images/malha02.png" class="position-absolute abs-img4">
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div
+                    class="col-12 col-md-3 my-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                </div>
+                <div class="col-12 col-md-6 my-3 d-flex justify-content-center align-items-center">
+                    <img src="./images/MercadoLivre04.png" alt="Imagem 2">
+                </div>
+                <div
+                    class="col-12 col-md-3 my-3 d-flex justify-content-center justify-content-md-end align-items-center">
+                    <span class="site-hey">COMPARTILHE</span>
+                    <a href="https://www.facebook.com" class="ms-2 social-icon" target="_blank">
+                        <img src="./images/facebook.png" class="img-fluid" />
+                    </a>
+                    <a href="https://www.x.com" class="ms-2 social-icon" target="_blank">
+                        <img src="./images/twitter.png" class="img-fluid" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
