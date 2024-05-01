@@ -21,7 +21,7 @@
 }
 
 :root {
-    /*Gshow*/   
+    /*Gshow*/
     --gshow-primary: #FF6700;
     --special-ad: #ffaa00;
     --text-primary: #333333;
@@ -53,13 +53,17 @@ footer {
 }
 
 a {
-    color: var(--text-primary); /* Sets the text color to the primary color variable defined in your CSS */
-    font-size: 1.2rem; /* Increases the font size */
+    color: var(--text-primary);
+    /* Sets the text color to the primary color variable defined in your CSS */
+    font-size: 1.2rem;
+    /* Increases the font size */
 }
 
 a:hover {
-    color: var(--secondary); /* Changes the color on hover to the secondary color */
-    text-decoration: underline; /* Adds an underline on hover for better visibility */
+    color: var(--secondary);
+    /* Changes the color on hover to the secondary color */
+    text-decoration: underline;
+    /* Adds an underline on hover for better visibility */
 }
 
 /* Menu options section*/
@@ -71,10 +75,14 @@ a:hover {
 }
 
 .special-ad {
-    background-color: var(--special-ad); /* Using the primary color variable defined in :root */
-    color: var(--secondary); /* Optional: Using the secondary color for text */
-    font-size: 15px; /* Optional: Increases the font size */
-    text-align: center; /* Centers the text inside the div */
+    background-color: var(--special-ad);
+    /* Using the primary color variable defined in :root */
+    color: var(--secondary);
+    /* Optional: Using the secondary color for text */
+    font-size: 15px;
+    /* Optional: Increases the font size */
+    text-align: center;
+    /* Centers the text inside the div */
 }
 
 /* Quiz Section*/
@@ -87,10 +95,14 @@ a:hover {
 }
 
 .quiz-counter {
-    background-color: var(--text-primary); /* Using the primary color variable defined in :root */
-    color: var(--secondary); /* Optional: Using the secondary color for text */
-    font-size: 15px; /* Optional: Increases the font size */
-    text-align: center; /* Centers the text inside the div */
+    background-color: var(--text-primary);
+    /* Using the primary color variable defined in :root */
+    color: var(--secondary);
+    /* Optional: Using the secondary color for text */
+    font-size: 15px;
+    /* Optional: Increases the font size */
+    text-align: center;
+    /* Centers the text inside the div */
 }
 
 .quiz-quest {
@@ -98,6 +110,7 @@ a:hover {
     font-weight: 700;
     line-height: 30px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 /* Video Section*/
@@ -120,13 +133,13 @@ a:hover {
 }
 
 
-.video-paragraph{
+.video-paragraph {
     font-size: 24px;
     font-weight: 400;
     line-height: 28px;
 }
 
-.video-paragraph-bold{
+.video-paragraph-bold {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
@@ -144,10 +157,11 @@ a:hover {
 
 .img2 {
     position: relative;
-    left: 6rem; /* Adjust this value to shift more or less */
+    left: 6rem;
+    /* Adjust this value to shift more or less */
 }
 
-.img-title{
+.img-title {
     font-family: 'proxima_nova_bold';
     font-size: 52px;
     font-weight: 700;
@@ -167,7 +181,7 @@ a:hover {
 
 /*absolute images*/
 
-.abs-img1{
+.abs-img1 {
     z-index: -1;
     bottom: 70px;
     right: -12px;
@@ -175,7 +189,7 @@ a:hover {
     max-height: 211px;
 }
 
-.abs-img2{
+.abs-img2 {
     z-index: -1;
     bottom: -23rem;
     left: -7rem;
@@ -190,7 +204,7 @@ a:hover {
     bottom: 18rem;
 }
 
-.abs-img4{
+.abs-img4 {
     z-index: 0;
     bottom: -5rem;
     right: 0px;
@@ -215,12 +229,12 @@ a:hover {
     font-weight: 400;
     line-height: 28px;
     text-align: left;
-    
+
 }
 
 .text-p1-bold {
     font-family: 'proxima_nova_bold';
-    font-size:  23.3px;
+    font-size: 23.3px;
     font-weight: 700;
     line-height: 28px;
     text-align: left;
@@ -233,7 +247,7 @@ a:hover {
     line-height: 48px;
 }
 
-.p01{
+.p01 {
     font-size: 24px;
     font-weight: 400;
     line-height: 28px;
@@ -242,13 +256,18 @@ a:hover {
 /* Buttons Section*/
 
 .custom-button {
-    background-color: var(--secondary); /* Sets background color to white for both buttons */
+    background-color: var(--secondary);
+    /* Sets background color to white for both buttons */
     border-color: var(--text-primary);
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
+    /* Rounded corners */
     border: solid;
-    font-size: 16px; /* Sets a font size */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    outline: none; /* Removes outline */
+    font-size: 16px;
+    /* Sets a font size */
+    cursor: pointer;
+    /* Changes the cursor to a pointer on hover */
+    outline: none;
+    /* Removes outline */
 }
 
 .btn-true {
@@ -262,11 +281,12 @@ a:hover {
     line-height: 26px;
     text-align: center;
     width: 100%;
-    max-width: 300px;
+    max-width: 600px;
 }
 
 .btn-false {
-    color: var(--text-primary); /* Keeps the text color of the second button black */
+    color: var(--text-primary);
+    /* Keeps the text color of the second button black */
     border-radius: 15px;
     border: 1px solid;
     border-color: var(--text-primary);
@@ -275,15 +295,17 @@ a:hover {
     line-height: 26px;
     text-align: center;
     width: 100%;
-    max-width: 300px;    
+    max-width: 600px;
 }
+
 .btn-goToLink {
     background-color: var(--ml-text-color);
     font-size: 32px;
     font-weight: 700;
     line-height: 54px;
     text-align: center;
-    color: var(--secondary); /* Keeps the text color of the second button black */
+    color: var(--secondary);
+    /* Keeps the text color of the second button black */
     border-radius: 40px;
 }
 
@@ -292,17 +314,22 @@ a:hover {
 /* Media Queries to adjust font size based on the width of the viewport */
 @media (max-width: 1400px) {
     .text-header1 {
-        font-size: 40px; /* Smaller font-size for smaller devices */
+        font-size: 40px;
+        /* Smaller font-size for smaller devices */
     }
+
     .text-p1 {
         font-size: 18.9px;
     }
+
     .text-p1-bold {
         font-size: 19.5px;
     }
+
     .quiz-quest {
         font-size: 24px;
     }
+
     .img-title {
         font-size: 44px;
     }
@@ -310,34 +337,43 @@ a:hover {
 
 @media (max-width: 1200px) {
     .text-header1 {
-        font-size: 34px; /* Smaller font-size for smaller devices */
+        font-size: 34px;
+        /* Smaller font-size for smaller devices */
     }
+
     .text-p1 {
         font-size: 16px;
     }
+
     .text-p1-bold {
         font-size: 16.5px;
     }
+
     .quiz-quest {
         font-size: 20px;
     }
+
     .img-title {
         font-size: 36px;
     }
-    
+
 }
 
 @media (max-width: 992px) {
     .text-header1 {
-        font-size: 26px; /* Even smaller font-size for tablets */
+        font-size: 26px;
+        /* Even smaller font-size for tablets */
     }
+
     .text-p1 {
         text-align: center;
         font-size: 16px;
     }
+
     .text-p1-bold {
         font-size: 16.5px;
     }
+
     .img-title {
         font-size: 27px;
     }
@@ -345,23 +381,30 @@ a:hover {
 
 @media (max-width: 768px) {
     .text-header1 {
-        font-size: 19px; /* Smaller font-size for mobile landscape */
+        font-size: 19px;
+        /* Smaller font-size for mobile landscape */
     }
+
     .text-p1 {
         font-size: 18.9px;
     }
+
     .text-p1-bold {
         font-size: 18.5px;
     }
+
     .quiz-quest {
         font-size: 19px;
     }
+
     .img-title {
         font-size: 50px;
     }
-    .video-text-header{
+
+    .video-text-header {
         text-align: center;
     }
+
     .video-paragraph {
         text-align: center;
     }
@@ -369,17 +412,22 @@ a:hover {
 
 @media (max-width: 576px) {
     .text-header1 {
-        font-size: 19px; /* Smaller font-size for mobile portrait */
+        font-size: 19px;
+        /* Smaller font-size for mobile portrait */
     }
+
     .text-p1 {
         font-size: 18.9px;
     }
+
     .text-p1-bold {
         font-size: 19.5px;
     }
-    .video-text-header{
+
+    .video-text-header {
         text-align: center;
     }
+
     .video-paragraph {
         text-align: center;
 
@@ -388,24 +436,37 @@ a:hover {
 
 @media (max-width: 530px) {
     .text-header1 {
-        font-size: 18px; /* Smaller font-size for mobile portrait */
+        font-size: 18px;
+        /* Smaller font-size for mobile portrait */
         text-align: center;
     }
+
     .text-p1 {
         font-size: 18.9px;
     }
+
     .text-p1-bold {
         font-size: 19.5px;
     }
+
     .img-title {
         text-align: center;
         font-size: 46px;
     }
-    .video-text-header{
+
+    .video-text-header {
         text-align: center;
     }
+
     .video-paragraph {
         text-align: center;
 
     }
+}
+
+.text-black {
+    margin-top: 10px !important;
+    color: #000 !important;
+    font-size: 17px !important;
+    font-weight: 100 !important;
 }
