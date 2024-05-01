@@ -229,16 +229,6 @@ a:hover {
     max-height: 465px;
 }
 
-.abs-img5 {
-    z-index: 0;
-    bottom: 6rem;
-    left: 0;
-    max-width: 211px;
-    max-height: 465px;
-}
-
-/* General Texts section*/
-
 .text-header1 {
     font-family: 'proxima_nova_bold';
     font-size: 48px;
@@ -379,6 +369,12 @@ a:hover {
     line-height: 22px;
 }
 
+.bottom-img {
+    max-width: 150px;
+    margin-right: 150px;
+    margin-top: -150px;
+}
+
 /* Media Queries to adjust font size based on the width of the viewport */
 @media (max-width: 1400px) {
     .text-header1 {
@@ -453,20 +449,15 @@ a:hover {
         scale: 0.8;
     }
 
-    .abs-img5 {
-        z-index: 0;
-        bottom: 6rem;
-        left: -1rem;
-        max-width: 211px;
-        max-height: 465px;
+    .abs-img3 {
+        left: -50px;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .text-header1 {
         font-size: 26px;
         text-align: center;
-        /* Even smaller font-size for tablets */
     }
 
     .text-p1 {
@@ -507,13 +498,6 @@ a:hover {
         bottom: 0px !important;
     }
 
-    /* .img2 {
-        position: relative;
-        left: 0rem;
-        scale: 1.2;
-        top: -12rem;
-    } */
-
     .abs-img1 {
         z-index: -1;
         bottom: 0px !important;
@@ -527,12 +511,10 @@ a:hover {
         max-width: 75% !important;
     }
 
-    .abs-img5 {
-        z-index: 0;
-        bottom: 10rem;
-        left: 6rem;
-        max-width: 100px;
-        max-height: 100px;
+    .bottom-img {
+        max-width: 100px !important;
+        margin-top: 0px !important;
+        margin-right: 0px !important;
     }
 }
 
@@ -566,33 +548,17 @@ a:hover {
         text-align: center;
     }
 
-    /* .img2 {
-        position: relative;
-        top: -10rem;
-    } */
-
     .abs-img1 {
         z-index: -1;
         bottom: 10rem;
         right: -3rem;
-        /* max-width: 465px; */
-        /* max-height: 211px; */
         scale: 1;
-    }
-
-    .abs-img5 {
-        z-index: 0;
-        bottom: 12.5rem;
-        left: 15rem;
-        max-width: 60px;
-        max-height: 60px;
     }
 }
 
 @media (max-width: 576px) {
     .text-header1 {
         font-size: 19px;
-        /* Smaller font-size for mobile portrait */
     }
 
     .text-p1 {
@@ -609,15 +575,6 @@ a:hover {
 
     .video-paragraph {
         text-align: center;
-
-    }
-
-    .abs-img5 {
-        z-index: 0;
-        bottom: 12.5rem;
-        left: 15rem;
-        max-width: 60px;
-        max-height: 60px;
     }
 }
 
@@ -647,15 +604,6 @@ a:hover {
 
     .video-paragraph {
         text-align: center;
-
-    }
-
-    .abs-img5 {
-        z-index: 0;
-        bottom: 12.5rem;
-        left: 15rem;
-        max-width: 60px;
-        max-height: 60px;
     }
 }
 
