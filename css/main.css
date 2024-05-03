@@ -120,6 +120,7 @@ a:hover {
 }
 
 .quiz-quest {
+    font-family: 'proxima_nova_bold';
     font-size: 29px;
     font-weight: 700;
     line-height: 30px;
@@ -165,7 +166,7 @@ a:hover {
 .video-text-header {
     font-family: 'proxima_nova_bold';
     font-weight: 700;
-    font-size: 44px;
+    font-size: 46px;
     line-height: 44px;
 }
 
@@ -175,7 +176,7 @@ a:hover {
     position: relative;
     left: 4.5rem;
     scale: 1.3;
-    bottom: 7rem;
+    bottom: 3rem;
 }
 
 .img-title {
@@ -266,6 +267,14 @@ a:hover {
 }
 
 /* Buttons Section*/
+
+.text-button-true {
+    font-family: 'proxima_nova_semibold';
+}
+
+.text-button-false {
+    font-family: 'proxima_nova_semibold';
+}
 
 .custom-button {
     background-color: var(--secondary);
@@ -370,8 +379,8 @@ a:hover {
 }
 
 .bottom-img {
-    max-width: 150px;
-    margin-right: 150px;
+    max-width: 200px;
+    margin-right: 200px;
     margin-top: -150px;
 }
 
@@ -399,7 +408,7 @@ a:hover {
     }
 
     .img2 {
-        bottom: 4rem;
+        bottom: 2rem;
     }
 
     .abs-img1 {
@@ -408,6 +417,17 @@ a:hover {
         right: -3rem;
         max-width: 465px;
         max-height: 211px;
+    }
+
+    .video-text-header{        
+        font-size: 40px;
+    }
+
+    .video-paragraph{
+        font-size: 19px;
+    }
+    .video-paragraph-bold{
+        font-size: 19px;
     }
 }
 
@@ -437,7 +457,7 @@ a:hover {
         position: relative;
         left: 3rem;
         scale: 1.3;
-        bottom: 4.5rem;
+        bottom: 2rem;
     }
 
     .abs-img1 {
@@ -451,6 +471,17 @@ a:hover {
 
     .abs-img3 {
         left: -50px;
+    }
+
+    .video-text-header{        
+        font-size: 33px;
+    }
+
+    .video-paragraph{
+        font-size: 16px;
+    }
+    .video-paragraph-bold{
+        font-size: 16px;
     }
 }
 
@@ -512,9 +543,23 @@ a:hover {
     }
 
     .bottom-img {
-        max-width: 100px !important;
+        max-width: 150px !important;
         margin-top: 0px !important;
         margin-right: 0px !important;
+    }
+
+    .video-text-header{        
+        text-align: center;
+        font-size: 44px;
+    }
+
+    .video-paragraph{ 
+        text-align: center;
+        font-size: 24px;
+    }
+    .video-paragraph-bold{ 
+        text-align: center;
+        font-size: 24px;
     }
 }
 
