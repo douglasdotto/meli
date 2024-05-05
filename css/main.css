@@ -50,6 +50,7 @@
 
 html {
     overflow-y: scroll;
+    overflow-x: hidden !important;
 }
 
 /* Estilos gerais */
@@ -420,14 +421,15 @@ a:hover {
         max-height: 211px;
     }
 
-    .video-text-header{        
+    .video-text-header {
         font-size: 40px;
     }
 
-    .video-paragraph{
+    .video-paragraph {
         font-size: 19px;
     }
-    .video-paragraph-bold{
+
+    .video-paragraph-bold {
         font-size: 19px;
     }
 }
@@ -474,14 +476,15 @@ a:hover {
         left: -50px;
     }
 
-    .video-text-header{        
+    .video-text-header {
         font-size: 33px;
     }
 
-    .video-paragraph{
+    .video-paragraph {
         font-size: 16px;
     }
-    .video-paragraph-bold{
+
+    .video-paragraph-bold {
         font-size: 16px;
     }
 }
@@ -549,16 +552,17 @@ a:hover {
         margin-right: 0px !important;
     }
 
-    .video-text-header{        
+    .video-text-header {
         text-align: center;
         font-size: 44px;
     }
 
-    .video-paragraph{ 
+    .video-paragraph {
         text-align: center;
         font-size: 24px;
     }
-    .video-paragraph-bold{ 
+
+    .video-paragraph-bold {
         text-align: center;
         font-size: 24px;
     }
@@ -661,4 +665,40 @@ a:hover {
     to {
         opacity: 1;
     }
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #ffe30b;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #ffd100;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffd100;
+}
+
+.header {
+    transition: transform 1s;
+}
+
+.header2 {
+    display: none;
 }

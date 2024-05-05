@@ -155,3 +155,29 @@ function finish() {
 }
 
 showQuestion();
+
+function moveImages() {
+    const img1 = document.getElementsByClassName('header1')[0];
+    const img2 = document.getElementsByClassName('header2')[0];
+    const omelhor = document.getElementsByClassName('omelhor')[0];
+    omelhor.style.opacity = '0'; // Faz a imagem 1 desaparecer suavemente
+
+    setTimeout(() => {
+        img1.style.transform = 'translateX(150%)';
+        img2.style.transform = 'translateX(150%)';
+    }, 1000); // Aguarda um segundo antes de iniciar a animação de volta
+
+    setTimeout(() => {
+        img1.style.opacity = '0'; // Faz a imagem 1 desaparecer suavemente
+        img2.style.opacity = '1'; // Faz a imagem 2 aparecer suavemente
+        omelhor.style.opacity = '1'; // Faz a imagem 3 aparecer suavemente
+        img1.style.display = 'none';
+        img2.style.display = 'flex';
+    }, 2000); // Aguarda um segundo antes de iniciar a animação de volta
+
+    setTimeout(() => {
+        img2.style.transform = 'translateX(0%)';
+    }, 3000); // Após dois segundos, inicia a animação de volta
+}
+
+moveImages();
