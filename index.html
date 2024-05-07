@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/main.css?v=3">
-    <link rel="stylesheet" href="./css/navbar.css?v=3" />
+    <link rel="stylesheet" href="./css/main.css?v=4">
+    <link rel="stylesheet" href="./css/navbar.css?v=4" />
 
     <link rel="icon"
         href="https://s2-gshow.glbimg.com/Pq0eOLQd7ZG8PR4k-GdgEwW3U5Q=/32x32/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/p/9/XoC4WKSauQcT37nqc9Ag/gshow-favicon-padrao-podcast-legado-20.png">
@@ -51,15 +51,18 @@
     </div>
 
     <div class="d-flex justify-content-center align-items-center mt-5 mb-3">
-        <div class="special-ad px-2">
+        <div class="special-ad px-2" data-aos="fade-down" data-aos-duration="1000">
             ESPECIAL PUBLICITÁRIO
         </div>
     </div>
 
     <div class="container text-center">
         <div class="d-inline-flex align-items-center justify-content-center menu-links">
-            <a href="#quiz-index" class="text-decoration-none me-4">Quiz</a>
-            <a href="#caldeirao" class="text-decoration-none">Caldeirão com Mion</a>
+            <a href="#quiz-index" data-aos="fade-down" data-aos-duration="1000"
+                class="text-decoration-none me-4">Quiz</a>
+            <a href="#caldeirao" data-aos="fade-down" data-aos-duration="1000" class="text-decoration-none">Caldeirão
+                com
+                Mion</a>
         </div>
     </div>
 
@@ -94,7 +97,7 @@
             <div class="col-10 d-flex flex-column justify-content-center text-center">
                 <h4 data-aos="fade-in" data-aos-duration="1250" class="text-header1">Entregue o que você sabe sobre o
                     Mercado Livre</h1>
-                    <p data-aos="fade-in" data-aos-duration="1250" class="text-p1">O Mercado Livre celebra seus 25 anos
+                    <p data-aos="fade-in" data-aos-duration="2250" class="text-p1">O Mercado Livre celebra seus 25 anos
                         no Caldeirão com Mion e, acredite: tem muita história para contar.
                         <br>Mas agora é com você. <b class="text-p1-bold">Entrege o seu melhor e teste seus
                             conhecimentos sobre a plataforma no quiz!</b>
@@ -119,16 +122,16 @@
             <div id="quiz_question_wrapper"
                 class="col-10 d-flex flex-column justify-content-center text-center quiz-header mt-4">
                 <h1 data-aos="fade-in" data-aos-duration="1250" id="question-container" class="quiz-quest mb-0">MERCADO
-                    LIVRE É A EMPRESA DE
-                    TECNOLOGIA LÍDER NA AMÉRICA LATINA 🤝</h1>
+                    LIVRE É A EMPRESA DE TECNOLOGIA LÍDER NA AMÉRICA LATINA 🤝</h1>
             </div>
             <div class="col-1"></div>
         </div>
-        <div class="row" id="quiz" data-aos="fade-in" data-aos-duration="1250">
+        <div class="row" id="quiz">
             <div class="col-1"></div>
             <div class="col-10 d-flex flex-column justify-content-center my-4">
                 <div class="d-flex flex-column align-items-center">
-                    <button class="custom-button my-2 py-3 btn-true" id="true-button">
+                    <button class="custom-button my-2 py-3 btn-true" id="true-button" data-aos="flip-up"
+                        data-aos-duration="1250">
                         <span class="d-flex justify-content-center text-button-true">
                             VERDADE
                             <img id="img-true-check" class="ms-1" src="./images/check.png" style="display: none;" />
@@ -136,7 +139,8 @@
                         </span>
                         <div id="explanation-container-true" class="text-explanation"></div>
                     </button>
-                    <button class="custom-button my-2 py-3 btn-false" id="false-button">
+                    <button class="custom-button my-2 py-3 btn-false" id="false-button" data-aos="flip-up"
+                        data-aos-duration="1250">
                         <span class="d-flex justify-content-center text-button-false">
                             MITO
                             <img id="img-false-check" class="ms-1" src="./images/check.png" style="display: none;" />
@@ -212,19 +216,17 @@
             <div class="row">
                 <div class="col-0 col-lg-1"></div>
                 <div class="col-12 col-lg-4 d-flex flex-column justify-content-center my-4">
-                    <p data-aos="fade-in" class="video-text-header" data-aos="fade-in" data-aos-duration="1250">O melhor
-                        já chegou no Caldeirão
-                    </p>
-                    <p data-aos="fade-in" class="video-paragraph mt-2" data-aos="fade-in" data-aos-duration="1250">
+                    <p class="video-text-header" data-aos="fade-right" data-aos-duration="1250">O
+                        melhor já chegou no Caldeirão</p>
+                    <p class="video-paragraph mt-2" data-aos="fade-right" data-aos-duration="2500">
                         Confira todas as <b class="video-paragraph-bold">novidades e surpresas do
                             Mercado Livre</b> no Caldeirão com Mion!</p>
                 </div>
                 <div class="col-0 col-lg-1"></div>
                 <div class="col-12 col-lg-5 d-flex flex-column my-4" style="z-index: 1;">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <video data-aos="fade-in" data-aos-duration="1250" class="embed-responsive-item video-player"
-                            src="./images/video.mp4" controls></video>
-                    </div>
+                    <div class="video-player" id="main-video" data-aos="flip-left" data-aos-duration="1250"></div>
+                    <!-- <video data-aos="flip-left" data-aos-duration="1250" class="embed-responsive-item video-player"
+                            src="./images/video.mp4" controls></video> -->
                 </div>
                 <div class="col-0 col-lg-1"></div>
 
@@ -233,8 +235,9 @@
                 </div>
 
                 <div class="col-12 col-lg-5 d-flex flex-column px-4 mt-4 mb-5">
-                    <p data-aos="fade-in" data-aos-duration="1250" class="video-title">Vídeo 1</p>
-                    <p data-aos="fade-in" data-aos-duration="1250" class="video-desc">Lorem ipsum.</p>
+                    <p data-aos="fade-in" data-aos-duration="1250" class="video-title">Importante é estar presente</p>
+                    <p data-aos="fade-in" data-aos-duration="2500" class="video-desc">No Dia das Mães, Mercado Livre
+                        entrega o melhor presente para a sua mãe. Confira!</p>
                 </div>
                 <div class="col-0 col-lg-1"></div>
             </div>
@@ -278,9 +281,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./js/index.js?v=3"></script>
+    <script src="./js/index.js?v=4"></script>
+
+    <script src="https://s.videos.globo.com/p2/j/api.min.js"></script>
 
     <script>
+        new WM.Player({ videosIDs: 12573919 }).attachTo(document.getElementById('main-video'));
+
         AOS.init();
     </script>
 </body>

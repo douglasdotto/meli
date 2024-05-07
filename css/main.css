@@ -139,6 +139,12 @@ a:hover {
     border-radius: 30px;
 }
 
+.clappr-player#wp3-player-1 {
+    min-height: 350px;
+    width: 100% !important;
+    border-radius: 30px !important;
+}
+
 .video-title {
     font-family: 'proxima_nova_bold';
     font-weight: 700;
