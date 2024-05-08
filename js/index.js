@@ -2,7 +2,7 @@ const levels = [
     {
         question: 'Mercado Livre é a empresa de tecnologia líder na América Latina <img src="./images/1.png" />',
         answer: 'verdade',
-        explanation: 'Em 2023, a marca foi considerada uma das 100 mais influentes do mundo pela revista TIME e uma das companhias que mudam o mundo pela Fortune.No mesmo ano, foi condecorada com o Responsible Business Award, da Reuters, por seu cuidado altamente elogiado à biodiversidade. Atualmente, o Mercado Livre emprega 58 mil colaboradores.'
+        explanation: 'Em 2023, a marca foi considerada uma das 100 mais influentes do mundo pela revista TIME e uma das companhias que mudam o mundo pela Fortune. No mesmo ano, foi condecorada com o Responsible Business Award, da Reuters, por seu cuidado altamente elogiado à biodiversidade. Atualmente, o Mercado Livre emprega 58 mil colaboradores.'
     },
     {
         question: 'O e-commerce do Mercado Livre não possui o envio mais eficiente <img src="./images/2.png" />',
