@@ -5,12 +5,12 @@ const levels = [
         explanation: 'Em 2023, a marca foi considerada uma das 100 mais influentes do mundo pela revista TIME e uma das companhias que mudam o mundo pela Fortune. No mesmo ano, foi condecorada com o Responsible Business Award, da Reuters, por seu cuidado altamente elogiado à biodiversidade. Atualmente, o Mercado Livre emprega 58 mil colaboradores.'
     },
     {
-        question: 'O e-commerce do Mercado Livre não possui o envio mais eficiente <img src="./images/2.png" />',
+        question: 'O Mercado Livre não possui o envio mais eficiente do Brasil <img src="./images/2.png" />',
         answer: 'mito',
         explanation: 'Na liderança do e-commerce em toda América Latina, o Mercado Livre oferece serviço completo e sortimento acessível tanto para compradores quanto vendedores. A eficiência se comprova nos dados do quarto trimestre de 2023, que surpreendem: foram 407 milhões de itens enviados e 413 milhões de itens vendidos.'
     },
     {
-        question: 'O Mercado Livre e o Mercado Pago não são da mesma companhia <img src="./images/3.png" />',
+        question: 'O Mercado Livre e o Mercado Pago não são da mesma empresa <img src="./images/3.png" />',
         answer: 'mito',
         explanation: 'O Mercado Pago é o banco digital do Mercado Livre, que também lidera em serviços financeiros na América Latina. São 53 milhões de usuários únicos ativos em toda a região.'
     },
