@@ -285,9 +285,15 @@
     <script src="https://s.videos.globo.com/p2/j/api.min.js"></script>
 
     <script>
-        new WM.Player({ videosIDs: 12573919 }).attachTo(document.getElementById('main-video'));
+        $(document).ready(function () {
+            new WM.Player({ videosIDs: 12573919 }).attachTo(document.getElementById('main-video'));
 
-        AOS.init();
+            AOS.init();
+
+            $('.btn-goToLink').click(function () {
+                window.open('https://www.mercadolivre.com.br/?matt_tool=70335369&matt_word=MLB_ML_GLOBO-GLOBO_OTH_X_BRD-X_ALL_CLICKS_BRDLOVE_X_DEFAULT&utm_source=globo&utm_medium=display&utm_campaign=MLB_ML_GLOBO-GLOBO_OTH_X_BRD-X_ALL_CLICKS_BRDLOVE_X_DEFAULT&utm_content=institucional', '_blank');
+            });
+        });
     </script>
 </body>
 
