@@ -6,8 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mercado Livre</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -60,7 +64,7 @@
         <div class="d-inline-flex align-items-center justify-content-center menu-links">
             <a href="#quiz-index" data-aos="fade-down" data-aos-duration="1000" class="text-decoration-none me-4">Teste
                 seu conhecimento</a>
-            <a href="#caldeirao" data-aos="fade-down" data-aos-duration="1000" class="text-decoration-none">Caldeirão
+            <a href="#mion" data-aos="fade-down" data-aos-duration="1000" class="text-decoration-none">Caldeirão
                 com Mion</a>
         </div>
     </div>
@@ -107,7 +111,13 @@
         <!--Positioned Absolutely -->
         <img src="./images/malha02.png" class="position-absolute abs-img2">
     </div>
-
+    <!-- Data Layer -->
+    <!-- DESKTOP -->
+    <!-- HOME1 -->
+    <div id='banner_slb_topo'></div>
+    <!-- MOBILE -->
+    <!-- HOME1_M com 300x250 -->
+    <div id='banner_mobile1'></div>
     <div class="container mb-4">
         <div class="row justify-content-center">
             <div class="d-flex justify-content-center align-items-center">
@@ -210,7 +220,7 @@
     </div>
 
     <!-- Secondary body -->
-    <div class="secondary-body py-5 position-relative" id="caldeirao">
+    <div class="secondary-body py-5 position-relative" id="mion">
         <div class="container mt-4">
             <div class="row">
                 <div class="col-0 col-lg-1"></div>
@@ -222,29 +232,39 @@
                             Mercado Livre</b> no Caldeirão com Mion!</p>
                 </div>
                 <div class="col-0 col-lg-1"></div>
-                <div class="col-12 col-lg-5 d-flex flex-column my-4" style="z-index: 1;">
-                    <div class="video-player" id="main-video" data-aos="flip-left" data-aos-duration="1250"></div>
-                    <!-- <video data-aos="flip-left" data-aos-duration="1250" class="embed-responsive-item video-player"
-                            src="./images/video.mp4" controls></video> -->
-                </div>
-                <div class="col-0 col-lg-1"></div>
 
-                <div class="col-0 col-lg-1"></div>
-                <div class="col-12 col-lg-5 d-flex flex-column justify-content-center">
-                </div>
-
-                <div class="col-12 col-lg-5 d-flex flex-column px-4 mt-4 mb-5">
-                    <p data-aos="fade-in" data-aos-duration="1250" class="video-title">Importante é estar presente</p>
-                    <p data-aos="fade-in" data-aos-duration="2500" class="video-desc">Neste Dia das Mães, Mercado Livre
-                        entrega o melhor. Confira!</p>
+                <div class="col-12 col-lg-5 my-4">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="video-player mb-5" id="main-video" data-aos="flip-left"
+                                data-aos-duration="1250">
+                            </div>
+                            <p data-aos="fade-in" data-aos-duration="1250" class="video-title">Importante é estar
+                                presente</p>
+                            <p data-aos="fade-in" data-aos-duration="2500" class="video-desc">Neste Dia das Mães,
+                                Mercado Livre entrega o melhor. Confira!</p>
+                        </div>
+                        <div class="item">
+                            <div class="video-player mb-5" id="main-video-2" data-aos="flip-left"
+                                data-aos-duration="1250">
+                            </div>
+                            <p data-aos="fade-in" data-aos-duration="1250" class="video-title">A solução pro seu
+                                presente</p>
+                            <p data-aos="fade-in" data-aos-duration="2500" class="video-desc">No Dia dos Namorados,
+                                uma disputa divertida entre casais entrega prêmios e cupom de desconto.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-0 col-lg-1"></div>
             </div>
 
             <div class="container mt-5">
                 <div class="d-flex flex-column align-items-center">
-                    <button class="btn-goToLink" data-aos="fade-in" data-aos-duration="1250">Vem conferir o melhor do
-                        Mercado Livre</button>
+                    <a
+                        href="https://www.mercadolivre.com.br/?matt_tool=70335369&matt_word=MLB_ML_GLOBO-GLOBO_OTH_X_BRD-X_ALL_CLICKS_BRDLOVE_X_DEFAULT&utm_source=globo&utm_medium=display&utm_campaign=MLB_ML_GLOBO-GLOBO_OTH_X_BRD-X_ALL_CLICKS_BRDLOVE_X_DEFAULT&utm_content=institucional">
+                        <button class="btn-goToLink" data-aos="fade-in" data-aos-duration="1250">Vem conferir o melhor
+                            do
+                            Mercado Livre</button></a>
                 </div>
             </div>
         </div>
@@ -267,10 +287,12 @@
                 <div
                     class="col-12 col-lg-4 my-3 d-flex justify-content-center justify-content-lg-end align-items-center">
                     <span class="site-hey">COMPARTILHE</span>
-                    <a href="https://www.facebook.com" class="ms-2 social-icon" target="_blank">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//especiais.gshow.globo.com/especial-publicitario/melinocaldeirao/"
+                        class="ms-2 social-icon" target="_blank">
                         <img src="./images/facebook.png" class="img-fluid" />
                     </a>
-                    <a href="https://www.x.com" class="ms-2 social-icon" target="_blank">
+                    <a href="https://twitter.com/intent/tweet?text=https%3A//especiais.gshow.globo.com/especial-publicitario/melinocaldeirao/"
+                        class="ms-2 social-icon" target="_blank">
                         <img src="./images/twitter.png" class="img-fluid" />
                     </a>
                 </div>
@@ -281,19 +303,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/index.js?v=7"></script>
-
     <script src="https://s.videos.globo.com/p2/j/api.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
     <script>
         $(document).ready(function () {
-            new WM.Player({ videosIDs: 12573919 }).attachTo(document.getElementById('main-video'));
-
             AOS.init();
 
-            $('.btn-goToLink').click(function () {
-                window.open('https://www.mercadolivre.com.br/?matt_tool=70335369&matt_word=MLB_ML_GLOBO-GLOBO_OTH_X_BRD-X_ALL_CLICKS_BRDLOVE_X_DEFAULT&utm_source=globo&utm_medium=display&utm_campaign=MLB_ML_GLOBO-GLOBO_OTH_X_BRD-X_ALL_CLICKS_BRDLOVE_X_DEFAULT&utm_content=institucional', '_blank');
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                margin: 10,
+                loop: false,
+                nav: false,
             });
+
+            new WM.Player({ videosIDs: 12573919 }).attachTo(document.getElementById('main-video'));
+            new WM.Player({ videosIDs: 12659423 }).attachTo(document.getElementById('main-video-2'));
         });
+    </script>
+
+    <!-- Data Layer -->
+    <script type="text/javascript">
+        var utag_data = utag_data || {};
+        utag_data.structure_tree = ["Gshow", "especial publicitario", "Meli", "Caldeirao"];
+        utag_data.tipo_pagina = 'home';
+        utag_data.page_name = 'index';
+        utag_data.ad_unit = 'tvg_Gshow/Especial_Exclusivo';
+        utag_data.ad_positions = JSON.stringify(
+            { "mobile": ["banner_mobile1"], "desktop": ["banner_slb_topo"] }
+        );
+    </script>
+    <script type="text/javascript">
+        (function (a, b, c, d) {
+            a = '//s3.glbimg.com/v1/AUTH_acd8438fd650434baa93efc372c066a1/libs/lib-pub-relay/gshow/prod/lib-pub-relay-gshow-latest.js';
+            b = document;
+            c = 'script';
+            d = b.createElement(c);
+            d.src = a;
+            d.type = 'text/java' + c;
+            d.async = true;
+            a = b.getElementsByTagName(c)[0];
+            a.parentNode.insertBefore(d, a);
+        })();
     </script>
 </body>
 

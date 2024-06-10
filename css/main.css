@@ -87,6 +87,7 @@ a:hover {
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
+    z-index: 999;
 }
 
 .special-ad {
@@ -139,8 +140,8 @@ a:hover {
     border-radius: 30px;
 }
 
-.clappr-player#wp3-player-1 {
-    min-height: 350px;
+.clappr-player {
+    min-height: 350px !important;
     width: 100% !important;
     border-radius: 30px !important;
 }
@@ -707,4 +708,10 @@ a:hover {
 
 .header2 {
     display: none;
+}
+
+.video-title,
+.video-desc {
+    word-wrap: break-word;
+    white-space: normal;
 }
