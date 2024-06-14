@@ -1,0 +1,19 @@
+:root {
+    --navbar_primary: #FF6700;
+    --navbar_secondary: #FFFFFF;
+}
+
+.navbar {
+    background-color: var(--navbar_primary);
+}
+
+.navbar_title{
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.navbar_logo{
+    max-width: 100px;
+    max-height: 67px;
+}
