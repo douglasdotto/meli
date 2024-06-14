@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercado Livre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/roleta.css" />
+
+    <link rel="icon"
+        href="https://s2-gshow.glbimg.com/Pq0eOLQd7ZG8PR4k-GdgEwW3U5Q=/32x32/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/p/9/XoC4WKSauQcT37nqc9Ag/gshow-favicon-padrao-podcast-legado-20.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="roulette" id="roulette">
+            <div id="rouletteContainer"></div>
+            <div class="dot">
+            </div>
+        </div>
+        <div class="pointer"></div>
+
+        <div class="centerMesh"></div>
+        <button id="btnSpin">RODAR</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/roleta.js"></script>
+
+    <script>
+        const options = [
+            { id: "option1", categoria: "esporte", imgSrc: "./images/roleta1/1.png" },
+            { id: "option2", categoria: "cultura pop", imgSrc: "./images/roleta1/2.png" },
+            { id: "option3", categoria: "história", imgSrc: "./images/roleta1/3.png" },
+            { id: "option4", categoria: "esporte", imgSrc: "./images/roleta1/1.png" },
+            { id: "option5", categoria: "cultura pop", imgSrc: "./images/roleta1/2.png" },
+            { id: "option6", categoria: "história", imgSrc: "./images/roleta1/3.png" }
+        ];
+
+        const rouletteContainer = document.getElementById('rouletteContainer');
+
+        options.forEach(option => {
+            const optionDiv = document.createElement('div');
+            optionDiv.className = 'optionRoulette';
+            optionDiv.id = option.id;
+
+            const imgSectionDiv = document.createElement('div');
+            imgSectionDiv.className = 'imgSection';
+            imgSectionDiv.id = `section${option.id.slice(-1)}`;
+
+            const rowDiv = document.createElement('div');
+            rowDiv.className = 'row justify-content-center align-items-center text-center';
+
+            const colCategoriaDiv = document.createElement('div');
+            colCategoriaDiv.className = 'col-12';
+            const spanCategoria = document.createElement('span');
+            spanCategoria.className = 'text-categoria';
+            spanCategoria.textContent = option.categoria;
+            colCategoriaDiv.appendChild(spanCategoria);
+
+            const colImgDiv = document.createElement('div');
+            colImgDiv.className = 'col-12';
+            const imgElement = document.createElement('img');
+            imgElement.src = option.imgSrc;
+            colImgDiv.appendChild(imgElement);
+
+            rowDiv.appendChild(colCategoriaDiv);
+            rowDiv.appendChild(colImgDiv);
+            imgSectionDiv.appendChild(rowDiv);
+            optionDiv.appendChild(imgSectionDiv);
+            rouletteContainer.appendChild(optionDiv);
+        });
+    </script>
+</body>
+
+</html>
