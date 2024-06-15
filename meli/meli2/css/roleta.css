@@ -28,7 +28,7 @@ body {
     opacity: 1;
 }
 
-.container {
+.roleta-container {
     width: 450px;
     height: 550px;
     display: flex;
@@ -38,7 +38,7 @@ body {
     overflow: hidden;
 }
 
-.container .mesh {
+.roleta-container .mesh {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -48,7 +48,7 @@ body {
     z-index: 2;
 }
 
-.container .centerMesh {
+.roleta-container .centerMesh {
     width: 50px;
     height: 50px;
     background-color: #252525;
@@ -57,7 +57,7 @@ body {
     border-radius: 50%;
 }
 
-.container .pointer {
+.roleta-container .pointer {
     position: absolute;
     top: 60px;
     left: calc(50% - 2px);
@@ -68,7 +68,7 @@ body {
     border-bottom: 0 solid transparent;
 }
 
-.container .pointer::before {
+.roleta-container .pointer::before {
     content: "";
     height: 0;
     width: 0;
@@ -82,7 +82,7 @@ body {
     z-index: -1;
 }
 
-.container #btnSpin {
+.roleta-container #btnSpin {
     background-color: #4b4f52;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
     color: white;
@@ -100,12 +100,12 @@ body {
     cursor: pointer;
 }
 
-.container .transition {
+.roleta-container .transition {
     transition: all 4s;
     transition-timing-function: cubic-bezier(0, 0.35, 0.5, 1);
 }
 
-.container .roulette {
+.roleta-container .roulette {
     width: 400px;
     height: 400px;
     position: relative;
@@ -117,7 +117,7 @@ body {
     align-items: center;
 }
 
-.container .roulette .dot {
+.roleta-container .roulette .dot {
     position: relative;
     width: 400px;
     height: 400px;
@@ -127,7 +127,7 @@ body {
     z-index: 1;
 }
 
-.container .roulette .optionRoulette {
+.roleta-container .roulette .optionRoulette {
     height: 0;
     width: 0;
     position: absolute;
@@ -135,7 +135,7 @@ body {
     top: 75px;
 }
 
-.container .roulette .optionRoulette .imgSection {
+.roleta-container .roulette .optionRoulette .imgSection {
     background-size: 400%;
     background-repeat: no-repeat;
     position: absolute;
@@ -145,31 +145,31 @@ body {
     left: -70px;
 }
 
-.container .roulette .optionRoulette #section1 {
+.roleta-container .roulette .optionRoulette #section1 {
     background-position: -15px -10px;
 }
 
-.container .roulette .optionRoulette #section2 {
+.roleta-container .roulette .optionRoulette #section2 {
     background-position: -115px -10px;
 }
 
-.container .roulette .optionRoulette #section3 {
+.roleta-container .roulette .optionRoulette #section3 {
     background-position: -15px -110px;
 }
 
-.container .roulette .optionRoulette #section4 {
+.roleta-container .roulette .optionRoulette #section4 {
     background-position: -230px -110px;
 }
 
-.container .roulette .optionRoulette #section5 {
+.roleta-container .roulette .optionRoulette #section5 {
     background-position: -115px -210px;
 }
 
-.container .roulette .optionRoulette #section6 {
+.roleta-container .roulette .optionRoulette #section6 {
     background-position: -230px -210px;
 }
 
-.container .roulette #option1 {
+.roleta-container .roulette #option1 {
     transform: rotate(0deg) translateY(-125px);
     border-top: 250px solid #2D3277;
     border-left: 145px solid transparent;
@@ -177,7 +177,7 @@ body {
     border-bottom: 0 solid transparent;
 }
 
-.container .roulette #option2 {
+.roleta-container .roulette #option2 {
     transform: rotate(60deg) translateY(-125px);
     border-top: 250px solid #FFE600;
     border-left: 145px solid transparent;
@@ -185,7 +185,7 @@ body {
     border-bottom: 0 solid transparent;
 }
 
-.container .roulette #option3 {
+.roleta-container .roulette #option3 {
     transform: rotate(120deg) translateY(-125px);
     border-top: 250px solid #00BCFF;
     border-left: 145px solid transparent;
@@ -193,7 +193,7 @@ body {
     border-bottom: 0 solid transparent;
 }
 
-.container .roulette #option4 {
+.roleta-container .roulette #option4 {
     transform: rotate(180deg) translateY(-125px);
     border-top: 250px solid #2D3277;
     border-left: 145px solid transparent;
@@ -201,7 +201,7 @@ body {
     border-bottom: 0 solid transparent;
 }
 
-.container .roulette #option5 {
+.roleta-container .roulette #option5 {
     transform: rotate(240deg) translateY(-125px);
     border-top: 250px solid #FFE600;
     border-left: 145px solid transparent;
@@ -209,7 +209,7 @@ body {
     border-bottom: 0 solid transparent;
 }
 
-.container .roulette #option6 {
+.roleta-container .roulette #option6 {
     transform: rotate(300deg) translateY(-125px);
     border-top: 250px solid #00BCFF;
     border-left: 145px solid transparent;
@@ -220,4 +220,41 @@ body {
 .text-categoria {
     color: #fff;
     font-size: 24px;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-out {
+    animation: fadeOut 2s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.perguntaContainer {
+    text-align: center;
+    margin-top: 20px;
 }
