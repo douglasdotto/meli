@@ -18,8 +18,7 @@
     href="https://s2-gshow.glbimg.com/Pq0eOLQd7ZG8PR4k-GdgEwW3U5Q=/32x32/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2021/p/9/XoC4WKSauQcT37nqc9Ag/gshow-favicon-padrao-podcast-legado-20.png">
 
 </head>
-<body>  
-    
+<body>
     <div class="navbar">
         <div class="container-fluid"> <!-- Changed to container-fluid for full width -->
             <div class="row flex-grow-1">
@@ -41,9 +40,7 @@
                 <div class="col d-flex justify-content-end"></div>
             </div>
         </div>
-    </div>
-
-
+    </div>     
     <div class="d-flex justify-content-center align-items-center mt-5 mb-4">
         <div class="special-ad px-2">
             ESPECIAL PUBLICITÁRIO
@@ -51,70 +48,377 @@
     </div>
         
 
-    <!-- Secondary body -->
-    <div class="pt-3 pb-5 position-relative">
-        <div class="container">
-            <div class="row">
-                <div class="col-1"></div>
-                <!-- Left side: Text header and paragraph, vertically centered -->
-                <div class="col-5 d-flex flex-column">
-                   
-                    <h1 class="text-header-lb">TRIVIA</h1>
-                    <h1 class="text-header-hb" style="margin-top: -10px;">MERCADO LIVRE</h1>
-                    <p class="text-section">Seja bem-vindo à Trivia do Mercado Livre! Inspirado no clássico jogo de perguntas, aqui você vai testar conhecimentos gerais, somar pontos e, se der tudo certo, ainda pode levar <b class="text-section-bold">cupom para usar na sua próxima compra no app.</b></p>
-                   
-                    <button class="custom-button btn-goToLink mt-3">JOGAR!</button>
-                   
-                </div>      
-                
-                
-                <!-- Spacer column -->
-                <div class="col"></div>
-                <!-- Right side: Video player, title, and description, vertically centered -->
-                <div class="col-5 d-flex flex-column justify-content-center">
-                    <h1 class="orientation-header h1-right">COMO JOGAR</h1>
-                    <ol class="structions-list ">
-                        <li><p class="text-section"><b class="text-section-bold">Gire a roleta:</b> cada fatia da roleta vai designar uma categoria. Serão 3 fases com 3 categorias diferentes em cada.</p>
-                        </li>
-                        <li><p class="text-section"><b class="text-section-bold">Responda corretamente:</b> conforme acerta, você avança para a próxima pergunta.</p>
-                        </li>
-                        <li><p class="text-section"><b class="text-section-bold">Fique de olho no tempo:</b> Você terá 20 segundos para responder cada questão.</p>
-                        </li>
-                    </ol>
-                    <h1 class="orientation-header  h1-right">DICA DE OURO</h1>
-                    <p class="text-section"><b class="text-section-bold">MERCADO LIVRE é coringa</b> acertando qualquer pergunta dessa categoria, voce avança de fase.</p>
+    <div id="trivia-body"  style="display: none;">        
+        <!-- Secondary body -->
+        <div class="pt-3 pb-5 position-relative">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <!-- Left side: Text header and paragraph, vertically centered -->
+                    <div class="col-5 d-flex flex-column">
                     
-                </div>               
-                <div class="col-1"></div>
+                        <h1 class="text-header-lb">TRIVIA</h1>
+                        <h1 class="text-header-hb" style="margin-top: -10px;">MERCADO LIVRE</h1>
+                        <p class="text-section">Seja bem-vindo à Trivia do Mercado Livre! Inspirado no clássico jogo de perguntas, aqui você vai testar conhecimentos gerais, somar pontos e, se der tudo certo, ainda pode levar <b class="text-section-bold">cupom para usar na sua próxima compra no app.</b></p>
+                    
+                        <button class="custom-button btn-goToLink mt-3">JOGAR!</button>
+                    
+                    </div>      
+                    
+                    
+                    <!-- Spacer column -->
+                    <div class="col"></div>
+                    <!-- Right side: Video player, title, and description, vertically centered -->
+                    <div class="col-5 d-flex flex-column justify-content-center">
+                        <h1 class="orientation-header h1-right">COMO JOGAR</h1>
+                        <ol class="structions-list ">
+                            <li><p class="text-section"><b class="text-section-bold">Gire a roleta:</b> cada fatia da roleta vai designar uma categoria. Serão 3 fases com 3 categorias diferentes em cada.</p>
+                            </li>
+                            <li><p class="text-section"><b class="text-section-bold">Responda corretamente:</b> conforme acerta, você avança para a próxima pergunta.</p>
+                            </li>
+                            <li><p class="text-section"><b class="text-section-bold">Fique de olho no tempo:</b> Você terá 20 segundos para responder cada questão.</p>
+                            </li>
+                        </ol>
+                        <h1 class="orientation-header  h1-right">DICA DE OURO</h1>
+                        <p class="text-section"><b class="text-section-bold">MERCADO LIVRE é coringa</b> acertando qualquer pergunta dessa categoria, voce avança de fase.</p>
+                        
+                    </div>               
+                    <div class="col-1"></div>
+                </div>
+                <div class="container mt-4">
+                    
+                </div>            
             </div>
-            <div class="container mt-4">
-                
-            </div>            
+            <!--Positioned Absolutely -->
+            <img src="./images/Rectangle.png" class="position-absolute abs-img3">
         </div>
-         <!--Positioned Absolutely -->
-         <img src="./images/Rectangle.png" class="position-absolute abs-img3">
     </div>
-    <footer class="mt-2">
-        <div class="container">
-            <div class="row">
-                <div
-                    class="col-12 col-md-3 my-3 d-flex align-items-center justify-content-center justify-content-md-start">
+    <div class="roleta-body" id="roletaContainer">
+        <div class="pt-3 pb-5 position-relative">
+            <div class="container">
+                <div class="row" >
+                    <div class="col-1"></div>
+                    <!-- Left side: Text header and paragraph, vertically centered -->
+                    <div class="col-5 d-flex flex-column">
+                    
+                        <div class="container-fluid">
+                           
+                            <div class="roleta-container" >
+                                <div class="roulette" id="roulette">
+                                    <div id="rouletteContainer"></div>
+                                    <div class="dot"></div>
+                                </div>
+                                <div class="pointer"></div>
+                    
+                                <div class="centerMesh"></div>
+                                <button id="btnSpin">RODAR</button>
+                            </div>
+                        </div>  
+                    
+                    </div>      
+                    
+                    
+                    <!-- Spacer column -->
+                    <div class="col"></div>
+                    <!-- Right side: Video player, title, and description, vertically centered -->
+                    <div class="col-5 d-flex flex-column justify-content-center">
+                        <h1 class="text-header-lb">TRIVIA </h1> <h1 class="text-header-hb" style="margin-top: -10px;">MERCADO LIVRE</h1>
+                        <h1 class="text-header-hb" style="margin-top: -10px;">1 fase</h1>
+                    </div>               
+                    <div class="col-1"></div>
                 </div>
-                <div class="col-12 col-md-6 my-3 d-flex justify-content-center align-items-center">
-                    <img src="./images/MercadoLivre04.png" alt="Imagem 2">
-                </div>
-                <div
-                    class="col-12 col-md-3 my-3 d-flex justify-content-center justify-content-md-end align-items-center">
-                    <span class="site-hey">COMPARTILHE</span>
-                    <a href="https://www.facebook.com" class="ms-2 social-icon" target="_blank">
-                        <img src="./images/facebook.png" class="img-fluid" />
-                    </a>
-                    <a href="https://www.x.com" class="ms-2 social-icon" target="_blank">
-                        <img src="./images/twitter.png" class="img-fluid" />
-                    </a>
-                </div>
+                <div class="container mt-4">
+                    
+                </div>                 
             </div>
         </div>
-    </footer>
+        
+    </div>
+    <div class="question-body hidden" id="question-body">
+        <div class="container">
+            <div class="row fade-in" id="row-top">
+                <div class="quiz-categoria col-6">
+                    <span id="categoria"></span>
+                </div>
+                <div class="quiz-tempo col-3">
+                    <span class="time-prefix">00:</span>
+                    <span id="tempo">20</span>
+                </div>
+                <div class="quiz-vida col-3">
+                    <span >💙</span>
+                    <span id="vidas">3</span>
+                </div>
+            </div>
+
+            <div class="row  fade-in" id="row-pergunta">
+                <div class="pergunta-quiz col-12" id="pergunta">
+                </div>
+                <div class="col-12" id="alternativas">
+                </div>
+            </div>
+        </div>          
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        const options = [
+            { id: "option1", categoria: "esporte", imgSrc: "./images/roleta1/1.png" },
+            { id: "option2", categoria: "cultura pop", imgSrc: "./images/roleta1/2.png" },
+            { id: "option3", categoria: "história", imgSrc: "./images/roleta1/3.png" },
+            { id: "option4", categoria: "esporte", imgSrc: "./images/roleta1/1.png" },
+            { id: "option5", categoria: "cultura pop", imgSrc: "./images/roleta1/2.png" },
+            { id: "option6", categoria: "história", imgSrc: "./images/roleta1/3.png" }
+        ];
+
+        const perguntas = {
+            "esporte": [
+                { pergunta: "Qual é o esporte mais popular do mundo?", alternativas: ["Futebol", "Basquete", "Tênis", "Críquete"], correta: "Futebol" },
+                { pergunta: "Em qual ano o Brasil ganhou a Copa do Mundo pela primeira vez?", alternativas: ["1958", "1962", "1970", "1994"], correta: "1958" },
+                { pergunta: "Quem é conhecido como 'Pelé' do Futebol?", alternativas: ["Edson Arantes do Nascimento", "Zico", "Romário", "Ronaldinho"], correta: "Edson Arantes do Nascimento" }
+            ],
+            "cultura pop": [
+                { pergunta: "Qual é o nome do bruxo protagonista em Harry Potter?", alternativas: ["Harry Potter", "Ron Weasley", "Hermione Granger", "Albus Dumbledore"], correta: "Harry Potter" },
+                { pergunta: "Qual é a capital de Westeros em Game of Thrones?", alternativas: ["King's Landing", "Winterfell", "Riverrun", "Casterly Rock"], correta: "King's Landing" },
+                { pergunta: "Quem é o super-herói mais popular da Marvel?", alternativas: ["Homem-Aranha", "Homem de Ferro", "Capitão América", "Thor"], correta: "Homem-Aranha" }
+            ],
+            "história": [
+                { pergunta: "Quem foi o primeiro presidente dos EUA?", alternativas: ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "John Adams"], correta: "George Washington" },
+                { pergunta: "Em que ano a Primeira Guerra Mundial começou?", alternativas: ["1914", "1918", "1939", "1945"], correta: "1914" },
+                { pergunta: "Qual civilização construiu as pirâmides do Egito?", alternativas: ["Egípcios", "Maias", "Astecas", "Incas"], correta: "Egípcios" }
+            ]
+        };
+
+        const perguntasRespondidas = {
+            "esporte": 0,
+            "cultura pop": 0,
+            "história": 0
+        };
+
+        let vidas = 3;
+
+        const spin = async () => {
+            const degBase = 1440;
+            const deg = await randomSpinDeg();
+            const section = getSection(deg);
+            const totalDeg = deg + degBase;
+            const sectionsElm = $('.optionRoulette');
+            const $roulette = $('#roulette');
+            const $btnSpin = $('#btnSpin');
+
+            $btnSpin.prop('disabled', true);
+            $roulette.removeClass('transition');
+            $roulette.css('transform', `rotate(0deg)`);
+            sectionsElm.addClass('brightness');
+
+            setTimeout(() => {
+                $roulette.addClass('transition');
+                $roulette.css('transform', `rotate(${totalDeg}deg)`);
+            }, 10);
+
+            setTimeout(() => {
+                sectionsElm.removeClass('brightness');
+                sectionsElm.each(function (i) {
+                    $(this).toggleClass('brightness', i === section).toggleClass('opacity', i !== section);
+                });
+
+                const categoria = options[section].categoria;
+                mostrarPergunta(categoria);
+
+                $('.container').addClass('flyTop');
+                $btnSpin.prop('disabled', false);
+            }, 4000);
+        };
+
+        const mostrarPergunta = (categoria, indexPergunta) => {
+            if (indexPergunta === undefined) {
+                indexPergunta = perguntasRespondidas[categoria];
+            }
+
+            if (indexPergunta >= perguntas[categoria].length) {
+                Swal.fire({
+                    title: 'Fim de jogo!',
+                    text: 'Você respondeu todas as perguntas desta categoria.',
+                    icon: 'info',
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Aqui você pode adicionar alguma lógica adicional se necessário
+                    }
+                });
+                return;
+            }
+
+            // Ocultar a roleta com animação
+            setTimeout(() => {
+                $('#roletaContainer').addClass('hidden');
+                $('#question-body').removeClass('hidden');
+            }, 2000);
+
+            setTimeout(() => {
+                // Mostrar a categoria e as vidas
+                $('#row-top').removeClass('hidden');
+                $('#row-pergunta').removeClass('hidden');
+                $("#categoria").html(`${categoria}`);
+                $('#tempo').html('20');
+
+                // Mostrar a pergunta
+                const perguntaAtual = perguntas[categoria][indexPergunta];
+                const perguntaElement = $('<div>').addClass('pergunta').text(perguntaAtual.pergunta);
+                $('#pergunta').html(perguntaElement);
+
+                // Mostrar as alternativas
+                const alternativasContainer = $('#alternativas').empty();
+                perguntaAtual.alternativas.forEach(alternativa => {
+                    const alternativaElement = $('<button>').addClass('custom-button alternativa').text(alternativa);
+                    alternativaElement.on('click', () => {
+                        if (alternativa === perguntaAtual.correta) {
+                            perguntasRespondidas[categoria]++;
+                            mostrarPergunta(categoria);
+                        } else {
+                            vidas--;
+                            atualizarVidas();
+                            if (vidas === 0) {
+                                Swal.fire({
+                                    title: 'Game Over!',
+                                    text: 'Você perdeu todas as vidas.',
+                                    icon: 'error',
+                                    confirmButtonText: 'OK'
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        location.reload();
+                                    }
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: 'Resposta errada!',
+                                    text: 'Você perdeu uma vida.',
+                                    icon: 'error',
+                                    confirmButtonText: 'OK'
+                                }).then(() => {
+                                    // Avançar para a próxima pergunta da mesma categoria
+                                    const indexPergunta = perguntasRespondidas[categoria];
+                                    mostrarPergunta(categoria);
+                                });
+                            }
+                        }
+                    });
+                    alternativasContainer.append(alternativaElement);
+                });
+
+                // Contador de tempo
+                let tempoRestante = 20;
+                const tempoInterval = setInterval(() => {
+                    tempoRestante--;
+                    $('#tempo').html(tempoRestante);
+                    if (tempoRestante <= 0) {
+                        clearInterval(tempoInterval);
+                        Swal.fire({
+                            title: 'Tempo esgotado!',
+                            text: 'Você não respondeu a tempo.',
+                            icon: 'info',
+                            confirmButtonText: 'OK'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                vidas--;
+                                atualizarVidas();
+                                if (vidas === 0) {
+                                    Swal.fire({
+                                        title: 'Game Over!',
+                                        text: 'Você perdeu todas as vidas.',
+                                        icon: 'error',
+                                        confirmButtonText: 'OK'
+                                    }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            location.reload();
+                                        }
+                                    });
+                                } else {
+                                    mostrarPergunta(categoria);
+                                }
+                            }
+                        });
+                    }
+                }, 1000);
+
+                // Limpar o intervalo se a pergunta for respondida antes do tempo acabar
+                alternativasContainer.on('click', () => {
+                    clearInterval(tempoInterval);
+                });
+            }, 2000);
+        };
+
+        const atualizarVidas = () => {
+            $('#vidas').text(vidas);
+        };
+
+        const getSection = (deg) => {
+            const sectionLength = 6;
+            const degBySection = 360 / sectionLength;
+            const ranges = [];
+            let value = 360;
+
+            for (let i = 0; i < sectionLength; i++) {
+                value -= (i === 0) ? degBySection / 2 : degBySection;
+                ranges.push(value);
+            }
+
+            const result = ranges.map((elm, i) => (deg >= elm) ? i : null).filter(elm => elm != null);
+            return (result.length === 0) ? 0 : result[0];
+        }
+
+        const randomSpinDeg = () => {
+            return Math.floor(Math.random() * 361);
+        }
+
+        const main = () => {
+            $('#btnSpin').on('click', spin);
+        }
+
+        const $rouletteContainer = $('#rouletteContainer');
+
+        options.forEach(option => {
+            const $optionDiv = $('<div>').addClass('optionRoulette').attr('id', option.id);
+            const $imgSectionDiv = $('<div>').addClass('imgSection').attr('id', `section${option.id.slice(-1)}`);
+            const $rowDiv = $('<div>').addClass('row justify-content-center align-items-center text-center');
+            const $colCategoriaDiv = $('<div>').addClass('col-12');
+            const $spanCategoria = $('<span>').addClass('text-categoria').text(option.categoria);
+            const $colImgDiv = $('<div>').addClass('col-12');
+            const $imgElement = $('<img>').attr('src', option.imgSrc);
+
+            $colCategoriaDiv.append($spanCategoria);
+            $colImgDiv.append($imgElement);
+            $rowDiv.append($colCategoriaDiv, $colImgDiv);
+            $imgSectionDiv.append($rowDiv);
+            $optionDiv.append($imgSectionDiv);
+            $rouletteContainer.append($optionDiv);
+        });
+
+        $(main);
+    </script>
 </body>
+<footer class="mt-2">
+    <div class="container">
+        <div class="row">
+            <div
+                class="col-12 col-md-3 my-3 d-flex align-items-center justify-content-center justify-content-md-start">
+            </div>
+            <div class="col-12 col-md-6 my-3 d-flex justify-content-center align-items-center">
+                <img src="./images/MercadoLivre04.png" alt="Imagem 2">
+            </div>
+            <div
+                class="col-12 col-md-3 my-3 d-flex justify-content-center justify-content-md-end align-items-center">
+                <span class="site-hey">COMPARTILHE</span>
+                <a href="https://www.facebook.com" class="ms-2 social-icon" target="_blank">
+                    <img src="./images/facebook.png" class="img-fluid" />
+                </a>
+                <a href="https://www.x.com" class="ms-2 social-icon" target="_blank">
+                    <img src="./images/twitter.png" class="img-fluid" />
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>

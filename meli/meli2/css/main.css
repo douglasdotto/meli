@@ -186,6 +186,304 @@ a:hover {
     background-color: var(--ml-light-blue); /* Color of the square */
 }
 
+
+/*Roleta*/
+.roleta-body {
+    background-color: var(--secondary) !important;
+    height: 60vh;
+}
+
+.opacity {
+    transition: all 0.3s;
+    opacity: 0.3;
+}
+
+.brightness {
+    transition: all 0.3s;
+    opacity: 1;
+}
+
+.roleta-container {
+    width: 450px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.roleta-container .mesh {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.roleta-container .centerMesh {
+    width: 50px;
+    height: 50px;
+    background-color: #252525;
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.roleta-container .pointer {
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 2px);
+    transform: translateX(-50%);
+    border-top: 35px solid #4b4f52;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+.roleta-container .pointer::before {
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 35px solid #897f88;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 0 solid transparent;
+    position: absolute;
+    top: -34px;
+    left: -17px;
+    z-index: -1;
+}
+
+.roleta-container #btnSpin {
+    background-color: #4b4f52;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-family: helvetica;
+    font-weight: bold;
+    position: absolute;
+    padding: 1em 3em;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 50px;
+    border: none;
+    bottom: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.roleta-container .transition {
+    transition: all 4s;
+    transition-timing-function: cubic-bezier(0, 0.35, 0.5, 1);
+}
+
+.roleta-container .roulette {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0px 24px 0px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.roleta-container .roulette .dot {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 10px solid black;
+    opacity: 0.2;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.roleta-container .roulette .optionRoulette {
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 55px;
+    top: 75px;
+}
+
+.roleta-container .roulette .optionRoulette .imgSection {
+    background-size: 400%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 140px;
+    height: 100px;
+    top: -170px;
+    left: -70px;
+}
+
+.roleta-container .roulette .optionRoulette #section1 {
+    background-position: -15px -10px;
+}
+
+.roleta-container .roulette .optionRoulette #section2 {
+    background-position: -115px -10px;
+}
+
+.roleta-container .roulette .optionRoulette #section3 {
+    background-position: -15px -110px;
+}
+
+.roleta-container .roulette .optionRoulette #section4 {
+    background-position: -230px -110px;
+}
+
+.roleta-container .roulette .optionRoulette #section5 {
+    background-position: -115px -210px;
+}
+
+.roleta-container .roulette .optionRoulette #section6 {
+    background-position: -230px -210px;
+}
+
+.roleta-container .roulette #option1 {
+    transform: rotate(0deg) translateY(-125px);
+    border-top: 250px solid #2D3277;
+    border-left: 145px solid transparent;
+    border-right: 145px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+.roleta-container .roulette #option2 {
+    transform: rotate(60deg) translateY(-125px);
+    border-top: 250px solid #FFE600;
+    border-left: 145px solid transparent;
+    border-right: 145px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+.roleta-container .roulette #option3 {
+    transform: rotate(120deg) translateY(-125px);
+    border-top: 250px solid #00BCFF;
+    border-left: 145px solid transparent;
+    border-right: 145px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+.roleta-container .roulette #option4 {
+    transform: rotate(180deg) translateY(-125px);
+    border-top: 250px solid #2D3277;
+    border-left: 145px solid transparent;
+    border-right: 145px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+.roleta-container .roulette #option5 {
+    transform: rotate(240deg) translateY(-125px);
+    border-top: 250px solid #FFE600;
+    border-left: 145px solid transparent;
+    border-right: 145px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+
+.roleta-container .roulette #option6 {
+    transform: rotate(300deg) translateY(-125px);
+    border-top: 250px solid #00BCFF;
+    border-left: 145px solid transparent;
+    border-right: 145px solid transparent;
+    border-bottom: 0 solid transparent;
+}
+.hidden {
+    display: none;
+}
+
+.fade-out {
+    animation: fadeOut 2s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 2s forwards;
+}
+
+.pergunta-quiz{
+    font-family: 'proxima_nova_bold';
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: left;
+    color: var(--text-primary);
+}
+
+.alternativa {
+    font-size: 32px;
+    margin-left: 40px;
+    font-weight: 700;
+    line-height: 54px;
+    color: var(--text-primary); /* Keeps the text color of the second button black */
+    border-radius: 20px !important;
+    padding: 5px 20px; /* Adjust the padding as needed */
+    max-width: 200px;
+    min-width: 160px;
+    white-space: nowrap;
+}
+
+.quiz-tempo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000; /* Borda de 1px sólida */
+    border-radius: 15px; /* Raio de 15px */
+    padding: 10px; /* Espaçamento interno para ajustar o tamanho da borda */
+    max-width: 90px;
+}
+
+.question-body{
+    position: relative;
+}
+
+.quiz-categoria {
+    background-color: var(--text-primary); /* Cor de fundo cinza */
+    padding: 10px; /* Espaçamento interno */
+    max-width: 200px;   
+    display: flex; /* Alinhamento dos itens em linha */
+    align-items: right; /* Centralização vertical dos itens */
+    color: var(--secondary); /* Cor do texto branca */
+}
+
+.icon-placeholder {
+    width: 20px; /* Largura do círculo */
+    height: 20px; /* Altura do círculo */
+    background-color: white; /* Cor do círculo */
+    border-radius: 50%; /* Tornar o elemento um círculo */
+    margin-right: 10px; /* Espaçamento entre o círculo e o texto */
+}
+
+.time-prefix,
+#tempo {
+    display: inline-block;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.perguntaContainer {
+    text-align: center;
+    margin-top: 20px;
+}
 /* Images section*/
 
 
