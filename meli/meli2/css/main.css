@@ -1,5 +1,12 @@
 /* Fonts */
 @font-face {
+    font-family: 'proxima';
+    src: url('../fonts/proxima.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'proxima_nova_semibold';
     src: url('../fonts/proxima-nova-semibold.otf') format('opentype');
     font-weight: normal;
@@ -21,7 +28,7 @@
 }
 
 :root {
-    /*Gshow*/   
+    /*Gshow*/
     --gshow-primary: #FF6700;
     --special-ad: #ffaa00;
     --text-primary: #333333;
@@ -39,9 +46,31 @@ html {
     overflow-y: scroll;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.trivia-body,
+.roleta-body,
+.question-body {
+    flex: 1;
+}
+
+.row-flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 /* Estilos gerais */
 body {
-    font-family: 'proxima_nova_semibold';
+    font-family: 'proxima';
     background-color: var(--primary);
 }
 
@@ -54,13 +83,17 @@ footer {
 }
 
 a {
-    color: var(--text-primary); /* Sets the text color to the primary color variable defined in your CSS */
-    font-size: 1.2rem; /* Increases the font size */
+    color: var(--text-primary);
+    /* Sets the text color to the primary color variable defined in your CSS */
+    font-size: 1.2rem;
+    /* Increases the font size */
 }
 
 a:hover {
-    color: var(--secondary); /* Changes the color on hover to the secondary color */
-    text-decoration: underline; /* Adds an underline on hover for better visibility */
+    color: var(--secondary);
+    /* Changes the color on hover to the secondary color */
+    text-decoration: underline;
+    /* Adds an underline on hover for better visibility */
 }
 
 /* Menu options section*/
@@ -72,10 +105,14 @@ a:hover {
 }
 
 .special-ad {
-    background-color: var(--special-ad); /* Using the primary color variable defined in :root */
-    color: var(--secondary); /* Optional: Using the secondary color for text */
-    font-size: 15px; /* Optional: Increases the font size */
-    text-align: center; /* Centers the text inside the div */
+    background-color: var(--special-ad);
+    /* Using the primary color variable defined in :root */
+    color: var(--secondary);
+    /* Optional: Using the secondary color for text */
+    font-size: 15px;
+    /* Optional: Increases the font size */
+    text-align: center;
+    /* Centers the text inside the div */
 }
 
 /* Quiz Section*/
@@ -88,10 +125,14 @@ a:hover {
 }
 
 .quiz-counter {
-    background-color: var(--text-primary); /* Using the primary color variable defined in :root */
-    color: var(--secondary); /* Optional: Using the secondary color for text */
-    font-size: 15px; /* Optional: Increases the font size */
-    text-align: center; /* Centers the text inside the div */
+    background-color: var(--text-primary);
+    /* Using the primary color variable defined in :root */
+    color: var(--secondary);
+    /* Optional: Using the secondary color for text */
+    font-size: 15px;
+    /* Optional: Increases the font size */
+    text-align: center;
+    /* Centers the text inside the div */
 }
 
 .quiz-quest {
@@ -112,19 +153,19 @@ a:hover {
     font-family: 'proxima_nova_bold';
     color: var(--ml-light-blue);
     font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
+    font-size: 44px;
+    line-height: 54px;
 }
 
 .text-header-hb {
     font-family: 'proxima_nova_bold';
     color: var(--ml-text-color);
     font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
+    font-size: 44px;
+    line-height: 54px;
 }
 
-.orientation-header  {
+.orientation-header {
     font-family: 'proxima_nova_bold';
     color: var(--ml-text-color);
     font-weight: 700;
@@ -150,16 +191,16 @@ a:hover {
     line-height: 28px;
 }
 
-.text-section{
-    font-size: 24px;
+.text-section {
+    font-size: 20px;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 26px;
 }
 
-.text-section-bold{
-    font-size: 24px;
+.text-section-bold {
+    font-size: 20px;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 26px;
     font-family: 'proxima_nova_bold';
 }
 
@@ -172,7 +213,8 @@ a:hover {
 
 .h1-right {
     position: relative;
-    padding-left: 40px; /* Adjust this value as needed */
+    padding-left: 40px;
+    /* Adjust this value as needed */
 }
 
 .h1-right::before {
@@ -181,16 +223,18 @@ a:hover {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 25px; /* Adjust the size of the square as needed */
-    height: 25px; /* Adjust the size of the square as needed */
-    background-color: var(--ml-light-blue); /* Color of the square */
+    width: 25px;
+    /* Adjust the size of the square as needed */
+    height: 25px;
+    /* Adjust the size of the square as needed */
+    background-color: var(--ml-light-blue);
+    /* Color of the square */
 }
 
 
 /*Roleta*/
 .roleta-body {
     background-color: var(--secondary) !important;
-    height: 60vh;
 }
 
 .opacity {
@@ -205,12 +249,13 @@ a:hover {
 
 .roleta-container {
     width: 450px;
-    height: 550px;
+    height: 575px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
+    margin-top: -50px;
 }
 
 .roleta-container .mesh {
@@ -264,15 +309,20 @@ a:hover {
     font-family: helvetica;
     font-weight: bold;
     position: absolute;
-    padding: 1em 3em;
-    font-size: 17px;
+    padding: 10px 30px;
+    font-size: 22px;
     text-transform: uppercase;
-    letter-spacing: 3px;
     border-radius: 50px;
     border: none;
-    bottom: 10px;
+    bottom: 5px;
     outline: none;
     cursor: pointer;
+    transition: 1s;
+}
+
+.roleta-container #btnSpin:hover {
+    transform: scale(1.1);
+    transition: 1s;
 }
 
 .roleta-container .transition {
@@ -391,75 +441,13 @@ a:hover {
     border-right: 145px solid transparent;
     border-bottom: 0 solid transparent;
 }
-.hidden {
-    display: none;
+
+.text-categoria {
+    color: #fff;
+    font-family: "proxima_nova_bold";
+    font-size: 24px;
 }
 
-.fade-out {
-    animation: fadeOut 2s forwards;
-}
-
-.fade-in {
-    animation: fadeIn 2s forwards;
-}
-
-.pergunta-quiz{
-    font-family: 'proxima_nova_bold';
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 56px;
-    text-align: left;
-    color: var(--text-primary);
-}
-
-.alternativa {
-    font-size: 32px;
-    margin-left: 40px;
-    font-weight: 700;
-    line-height: 54px;
-    color: var(--text-primary); /* Keeps the text color of the second button black */
-    border-radius: 20px !important;
-    padding: 5px 20px; /* Adjust the padding as needed */
-    max-width: 200px;
-    min-width: 160px;
-    white-space: nowrap;
-}
-
-.quiz-tempo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #000; /* Borda de 1px sólida */
-    border-radius: 15px; /* Raio de 15px */
-    padding: 10px; /* Espaçamento interno para ajustar o tamanho da borda */
-    max-width: 90px;
-}
-
-.question-body{
-    position: relative;
-}
-
-.quiz-categoria {
-    background-color: var(--text-primary); /* Cor de fundo cinza */
-    padding: 10px; /* Espaçamento interno */
-    max-width: 200px;   
-    display: flex; /* Alinhamento dos itens em linha */
-    align-items: right; /* Centralização vertical dos itens */
-    color: var(--secondary); /* Cor do texto branca */
-}
-
-.icon-placeholder {
-    width: 20px; /* Largura do círculo */
-    height: 20px; /* Altura do círculo */
-    background-color: white; /* Cor do círculo */
-    border-radius: 50%; /* Tornar o elemento um círculo */
-    margin-right: 10px; /* Espaçamento entre o círculo e o texto */
-}
-
-.time-prefix,
-#tempo {
-    display: inline-block;
-}
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -484,16 +472,126 @@ a:hover {
     text-align: center;
     margin-top: 20px;
 }
+
+.hidden {
+    display: none;
+}
+
+.fade-out {
+    animation: fadeOut 2s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 2s forwards;
+}
+
+.pergunta-quiz {
+    font-family: 'proxima_nova_bold';
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: left;
+    color: var(--text-primary);
+}
+
+.alternativa {
+    font-size: 32px;
+    margin-left: 40px;
+    font-weight: 700;
+    line-height: 54px;
+    color: var(--text-primary);
+    /* Keeps the text color of the second button black */
+    border-radius: 20px !important;
+    padding: 5px 20px;
+    /* Adjust the padding as needed */
+    max-width: 200px;
+    min-width: 160px;
+    white-space: nowrap;
+}
+
+.quiz-tempo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    /* Borda de 1px sólida */
+    border-radius: 15px;
+    /* Raio de 15px */
+    padding: 10px;
+    /* Espaçamento interno para ajustar o tamanho da borda */
+    max-width: 90px;
+}
+
+.question-body {
+    position: relative;
+}
+
+.quiz-categoria {
+    background-color: var(--text-primary);
+    /* Cor de fundo cinza */
+    padding: 10px;
+    /* Espaçamento interno */
+    max-width: 200px;
+    display: flex;
+    /* Alinhamento dos itens em linha */
+    align-items: right;
+    /* Centralização vertical dos itens */
+    color: var(--secondary);
+    /* Cor do texto branca */
+}
+
+.icon-placeholder {
+    width: 20px;
+    /* Largura do círculo */
+    height: 20px;
+    /* Altura do círculo */
+    background-color: white;
+    /* Cor do círculo */
+    border-radius: 50%;
+    /* Tornar o elemento um círculo */
+    margin-right: 10px;
+    /* Espaçamento entre o círculo e o texto */
+}
+
+.time-prefix,
+#tempo {
+    display: inline-block;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.perguntaContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+
 /* Images section*/
-
-
 
 .img2 {
     position: relative;
-    left: 6rem; /* Adjust this value to shift more or less */
+    left: 6rem;
+    /* Adjust this value to shift more or less */
 }
 
-.img-title{
+.img-title {
     font-family: 'proxima_nova_bold';
     font-size: 52px;
     font-weight: 700;
@@ -513,7 +611,7 @@ a:hover {
 
 /*absolute images*/
 
-.abs-img1{
+.abs-img1 {
     z-index: -1;
     bottom: 70px;
     right: -12px;
@@ -521,7 +619,7 @@ a:hover {
     max-height: 211px;
 }
 
-.abs-img2{
+.abs-img2 {
     z-index: -1;
     bottom: -23rem;
     left: -7rem;
@@ -536,7 +634,7 @@ a:hover {
     bottom: 25rem;
 }
 
-.abs-img4{
+.abs-img4 {
     z-index: 0;
     bottom: -5rem;
     right: 0px;
@@ -561,12 +659,12 @@ a:hover {
     font-weight: 400;
     line-height: 28px;
     text-align: left;
-    
+
 }
 
 .text-p1-bold {
     font-family: 'proxima_nova_bold';
-    font-size:  23.3px;
+    font-size: 23.3px;
     font-weight: 700;
     line-height: 28px;
     text-align: left;
@@ -579,7 +677,7 @@ a:hover {
     line-height: 48px;
 }
 
-.p01{
+.p01 {
     font-size: 24px;
     font-weight: 400;
     line-height: 28px;
@@ -589,12 +687,16 @@ a:hover {
 
 .custom-button {
     background-color: var(--secondary);
-    border-radius: 2px; /* Rounded corners */
+    border-radius: 2px;
+    /* Rounded corners */
     border: none;
-    font-size: 16px; /* Sets a font size */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    outline: none; /* Removes outline */
-    
+    font-size: 16px;
+    /* Sets a font size */
+    cursor: pointer;
+    /* Changes the cursor to a pointer on hover */
+    outline: none;
+    /* Removes outline */
+
 }
 
 .btn-goToLink {
@@ -602,12 +704,20 @@ a:hover {
     font-size: 32px;
     font-weight: 700;
     line-height: 54px;
-    color: var(--secondary); /* Keeps the text color of the second button black */
+    color: var(--secondary);
+    /* Keeps the text color of the second button black */
     border-radius: 15px;
-    padding: 5px 20px; /* Adjust the padding as needed */
+    padding: 5px 20px;
+    /* Adjust the padding as needed */
     max-width: 200px;
     max-height: 60px;
     white-space: nowrap;
+    transition: 1s;
+}
+
+.btn-goToLink:hover {
+    transform: scale(1.1);
+    transition: 1s;
 }
 
 .btn-true {
@@ -625,7 +735,8 @@ a:hover {
 }
 
 .btn-false {
-    color: var(--text-primary); /* Keeps the text color of the second button black */
+    color: var(--text-primary);
+    /* Keeps the text color of the second button black */
     border-radius: 15px;
     border: 1px solid;
     border-color: var(--text-primary);
@@ -634,7 +745,7 @@ a:hover {
     line-height: 26px;
     text-align: center;
     width: 100%;
-    max-width: 300px;    
+    max-width: 300px;
 }
 
 
@@ -644,108 +755,137 @@ a:hover {
 /* Media Queries to adjust font size based on the width of the viewport */
 @media (max-width: 1400px) {
     .text-header1 {
-        font-size: 40px; /* Smaller font-size for smaller devices */
+        font-size: 40px;
+        /* Smaller font-size for smaller devices */
     }
+
     .text-p1 {
         font-size: 18.9px;
     }
+
     .text-p1-bold {
         font-size: 19.5px;
     }
+
     .quiz-quest {
         font-size: 24px;
     }
+
     .img-title {
         font-size: 44px;
     }
-    .abs-img3 {       
+
+    .abs-img3 {
         bottom: 26.5rem;
     }
 }
 
 @media (max-width: 1200px) {
     .text-header1 {
-        font-size: 34px; /* Smaller font-size for smaller devices */
+        font-size: 34px;
+        /* Smaller font-size for smaller devices */
     }
+
     .text-p1 {
         font-size: 16px;
     }
+
     .text-p1-bold {
         font-size: 16.5px;
     }
+
     .quiz-quest {
         font-size: 20px;
     }
+
     .img-title {
         font-size: 36px;
     }
-    .abs-img3 {       
+
+    .abs-img3 {
         bottom: 30rem;
     }
-    
-    
+
+
 }
 
 @media (max-width: 992px) {
     .text-header1 {
-        font-size: 26px; /* Even smaller font-size for tablets */
+        font-size: 26px;
+        /* Even smaller font-size for tablets */
     }
+
     .text-p1 {
         text-align: center;
         font-size: 16px;
     }
+
     .text-p1-bold {
         font-size: 16.5px;
     }
+
     .img-title {
         font-size: 27px;
     }
-    .abs-img3 {       
+
+    .abs-img3 {
         bottom: 40rem;
     }
 }
 
 @media (max-width: 768px) {
     .text-header1 {
-        font-size: 19px; /* Smaller font-size for mobile landscape */
+        font-size: 19px;
+        /* Smaller font-size for mobile landscape */
     }
+
     .text-p1 {
         font-size: 18.9px;
     }
+
     .text-p1-bold {
         font-size: 18.5px;
     }
+
     .quiz-quest {
         font-size: 19px;
     }
+
     .img-title {
         font-size: 50px;
     }
-    .video-text-header{
+
+    .video-text-header {
         text-align: center;
     }
+
     .video-paragraph {
         text-align: center;
     }
 
-    .abs-img3 {       
+    .abs-img3 {
         display: none;
     }
 }
 
 @media (max-width: 576px) {
     .text-header1 {
-        font-size: 19px; /* Smaller font-size for mobile portrait */
+        font-size: 19px;
+        /* Smaller font-size for mobile portrait */
     }
+
     .text-p1 {
         font-size: 18.9px;
     }
+
     .text-p1-bold {
         font-size: 19.5px;
     }
-    .video-text-header{
+
+    .video-text-header {
         text-align: center;
     }
+
     .video-paragraph {
         text-align: center;
 
@@ -754,22 +894,28 @@ a:hover {
 
 @media (max-width: 530px) {
     .text-header1 {
-        font-size: 18px; /* Smaller font-size for mobile portrait */
+        font-size: 18px;
+        /* Smaller font-size for mobile portrait */
         text-align: center;
     }
+
     .text-p1 {
         font-size: 18.9px;
     }
+
     .text-p1-bold {
         font-size: 19.5px;
     }
+
     .img-title {
         text-align: center;
         font-size: 46px;
     }
-    .video-text-header{
+
+    .video-text-header {
         text-align: center;
     }
+
     .video-paragraph {
         text-align: center;
 
