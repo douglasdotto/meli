@@ -525,8 +525,6 @@ a:hover {
     transition: 0.5s;
 }
 
-
-
 .external-bg {
     position: absolute;
     left: 0;
@@ -552,9 +550,9 @@ a:hover {
     border-radius: 15px;
     max-width: 90px;
     font-size: 20px;
+    padding: 5px;
     font-family: "proxima_nova_bold";
 }
-
 
 .question-body {
     position: relative;
@@ -840,7 +838,6 @@ a:hover {
         background-color: var(--text-primary);
         z-index: -1; /* Garantir que fique atrás dos outros elementos */
     }
-
     
     .external-bg {
         width: calc(20% + 40px);
