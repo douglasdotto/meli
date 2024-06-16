@@ -284,17 +284,19 @@
             }
 
             if (indexPergunta >= perguntas[categoria].length) {
-                Swal.fire({
-                    title: 'Fim de jogo!',
-                    text: 'Você respondeu todas as perguntas desta categoria.',
-                    icon: 'info',
-                    confirmButtonText: 'OK'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        // Aqui você pode adicionar alguma lógica adicional se necessário
-                    }
-                });
-                return;
+                setTimeout(() => {
+                    Swal.fire({
+                        title: 'Fim de jogo!',
+                        text: 'Você respondeu todas as perguntas desta categoria.',
+                        icon: 'info',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Aqui você pode adicionar alguma lógica adicional se necessário
+                        }
+                    });
+                    return;
+                }, 2000);
             }
 
             // Ocultar a roleta com animação
@@ -325,9 +327,14 @@
                     const alternativaElement = $('<button>').addClass('custom-button alternativa').text(alternativa);
                     alternativaElement.on('click', () => {
                         if (alternativa === perguntaAtual.correta) {
+                            alternativaElement.append('👍');
+                            alternativaElement.addClass('acerto');
+
                             perguntasRespondidas[categoria]++;
                             mostrarPergunta(categoria);
                         } else {
+                            alternativaElement.append('👎');
+                            alternativaElement.addClass('erro');
                             vidas--;
                             atualizarVidas();
                             if (vidas === 0) {
@@ -342,16 +349,8 @@
                                     }
                                 });
                             } else {
-                                Swal.fire({
-                                    title: 'Resposta errada!',
-                                    text: 'Você perdeu uma vida.',
-                                    icon: 'error',
-                                    confirmButtonText: 'OK'
-                                }).then(() => {
-                                    // Avançar para a próxima pergunta da mesma categoria
-                                    const indexPergunta = perguntasRespondidas[categoria];
-                                    mostrarPergunta(categoria);
-                                });
+                                perguntasRespondidas[categoria]++;
+                                mostrarPergunta(categoria);
                             }
                         }
                     });

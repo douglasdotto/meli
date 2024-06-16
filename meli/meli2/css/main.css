@@ -513,7 +513,7 @@ a:hover {
     border-radius: 20px !important;
     padding: 5px 20px;
     white-space: nowrap;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .alternativa:not(:first-child) {
@@ -521,8 +521,8 @@ a:hover {
 }
 
 .alternativa:hover {
-    background-color: var(--ml-light-blue) !important;
-    transition: 1s;
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .quiz-tempo {
@@ -778,6 +778,16 @@ a:hover {
 
 .site-hey {
     color: #fff;
+}
+
+.acerto {
+    background-color: var(--ml-light-blue) !important;
+    color: #fff !important;
+}
+
+.erro {
+    background-color: #C4160B !important;
+    color: #fff !important;
 }
 
 /* Media Queries to adjust font size based on the width of the viewport */
