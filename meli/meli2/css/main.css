@@ -525,7 +525,8 @@ a:hover {
     transition: 0.5s;
 }
 
-.quiz-tempo, .quiz-vida {
+.quiz-tempo,
+.quiz-vida {
     margin-top: 8px;
     display: flex;
     align-items: center;
@@ -534,11 +535,12 @@ a:hover {
     border-radius: 15px;
     max-width: 90px;
     font-size: 20px;
+    padding: 5px;
     font-family: "proxima_nova_bold";
 }
 
-.quiz-tempo {    
-    margin-left: 65rem !important; /* Ajuste para mover o elemento mais para a esquerda */
+.quiz-tempo {
+    margin-left: 65rem !important;
 }
 
 .quiz-categoria {
@@ -553,7 +555,6 @@ a:hover {
     color: var(--secondary);
     align-items: center;
 }
-
 
 .question-body {
     position: relative;
@@ -808,7 +809,7 @@ a:hover {
         font-size: 44px;
     }
 
-    .quiz-tempo { 
+    .quiz-tempo {
         margin-left: 55rem !important;
     }
 }
@@ -835,7 +836,7 @@ a:hover {
         font-size: 36px;
     }
 
-    .quiz-tempo { 
+    .quiz-tempo {
         margin-left: 45rem !important;
     }
 }
@@ -859,7 +860,7 @@ a:hover {
         font-size: 27px;
     }
 
-    .quiz-tempo { 
+    .quiz-tempo {
         margin-left: auto !important;
     }
 }
