@@ -530,7 +530,7 @@ a:hover {
 .external-bg {
     position: absolute;
     left: 0;
-    width: calc(20%); /* Ajuste conforme necessário para a largura desejada */
+    width: calc(25%); /* Ajuste conforme necessário para a largura desejada */
     height: 55px;
     background-color: var(--text-primary);
     z-index: -1; /* Garantir que fique atrás dos outros elementos */
