@@ -525,8 +525,26 @@ a:hover {
     transition: 0.5s;
 }
 
+
+
+.external-bg {
+    position: absolute;
+    left: 0;
+    width: calc(20%); /* Ajuste conforme necessário para a largura desejada */
+    height: 55px;
+    background-color: var(--text-primary);
+    z-index: -1; /* Garantir que fique atrás dos outros elementos */
+}
+
+.quiz-categoria {
+    background-color: transparent; /* Remover o fundo pois a div externa já cobre isso */
+    padding: 10px;
+    display: flex;
+    color: var(--secondary);
+    align-items: center;
+}
+
 .quiz-tempo, .quiz-vida {
-    margin-top: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -535,23 +553,6 @@ a:hover {
     max-width: 90px;
     font-size: 20px;
     font-family: "proxima_nova_bold";
-}
-
-.quiz-tempo {    
-    margin-left: 65rem !important; /* Ajuste para mover o elemento mais para a esquerda */
-}
-
-.quiz-categoria {
-    position: absolute;
-    justify-content: flex-end;
-    left: 0;
-    background-color: var(--text-primary);
-    padding-right: 40px;
-    display: flex;
-    max-width: 400px;
-    min-height: 50px;
-    color: var(--secondary);
-    align-items: center;
 }
 
 
@@ -812,10 +813,6 @@ a:hover {
     .img-title {
         font-size: 44px;
     }
-
-    .quiz-tempo { 
-        margin-left: 55rem !important;
-    }
 }
 
 @media (max-width: 1200px) {
@@ -840,9 +837,20 @@ a:hover {
         font-size: 36px;
     }
 
-    .quiz-tempo { 
-        margin-left: 45rem !important;
+    .external-bg {
+        position: absolute;
+        left: 0;
+        width: calc(20%); /* Ajuste conforme necessário para a largura desejada */
+        height: 55px;
+        background-color: var(--text-primary);
+        z-index: -1; /* Garantir que fique atrás dos outros elementos */
     }
+
+    
+    .external-bg {
+        width: calc(20% + 40px);
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -864,8 +872,8 @@ a:hover {
         font-size: 27px;
     }
 
-    .quiz-tempo { 
-        margin-left: auto !important;
+    .external-bg {
+        width: calc(20% + 90px);
     }
 }
 
