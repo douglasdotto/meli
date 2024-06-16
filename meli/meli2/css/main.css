@@ -525,7 +525,8 @@ a:hover {
     transition: 0.5s;
 }
 
-.quiz-tempo {
+.quiz-tempo, .quiz-vida {
+    margin-top: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -536,29 +537,28 @@ a:hover {
     font-family: "proxima_nova_bold";
 }
 
-.quiz-vida {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #000;
-    border-radius: 15px;
-    max-width: 90px;
-    font-size: 20px;
-    font-family: "proxima_nova_bold";
+.quiz-tempo {    
+    margin-left: 65rem !important; /* Ajuste para mover o elemento mais para a esquerda */
 }
+
+.quiz-categoria {
+    position: absolute;
+    justify-content: flex-end;
+    left: 0;
+    background-color: var(--text-primary);
+    padding-right: 40px;
+    display: flex;
+    max-width: 400px;
+    min-height: 50px;
+    color: var(--secondary);
+    align-items: center;
+}
+
 
 .question-body {
     position: relative;
 }
 
-.quiz-categoria {
-    background-color: var(--text-primary);
-    padding: 10px;
-    max-width: 200px;
-    display: flex;
-    color: var(--secondary);
-    align-items: center;
-}
 
 #categoria {
     font-size: 20px;
@@ -812,6 +812,10 @@ a:hover {
     .img-title {
         font-size: 44px;
     }
+
+    .quiz-tempo { 
+        margin-left: 55rem !important;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -835,6 +839,10 @@ a:hover {
     .img-title {
         font-size: 36px;
     }
+
+    .quiz-tempo { 
+        margin-left: 45rem !important;
+    }
 }
 
 @media (max-width: 992px) {
@@ -854,6 +862,10 @@ a:hover {
 
     .img-title {
         font-size: 27px;
+    }
+
+    .quiz-tempo { 
+        margin-left: auto !important;
     }
 }
 
