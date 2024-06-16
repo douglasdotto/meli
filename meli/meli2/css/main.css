@@ -528,21 +528,25 @@ a:hover {
 .external-bg {
     position: absolute;
     left: 0;
-    width: calc(20%); /* Ajuste conforme necessário para a largura desejada */
+    width: calc(20%);
+    /* Ajuste conforme necessário para a largura desejada */
     height: 55px;
     background-color: var(--text-primary);
-    z-index: -1; /* Garantir que fique atrás dos outros elementos */
+    z-index: -1;
+    /* Garantir que fique atrás dos outros elementos */
 }
 
 .quiz-categoria {
-    background-color: transparent; /* Remover o fundo pois a div externa já cobre isso */
+    background-color: transparent;
+    /* Remover o fundo pois a div externa já cobre isso */
     padding: 10px;
     display: flex;
     color: var(--secondary);
     align-items: center;
 }
 
-.quiz-tempo, .quiz-vida {
+.quiz-tempo,
+.quiz-vida {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -550,7 +554,7 @@ a:hover {
     border-radius: 15px;
     max-width: 90px;
     font-size: 20px;
-    padding: 5px;
+    padding: 3px;
     font-family: "proxima_nova_bold";
 }
 
@@ -646,10 +650,12 @@ a:hover {
 .abs-img2 {
     right: -100px;
     top: 0px;
+    z-index: -1;
 }
 
 .abs-img3 {
     left: -40px;
+    z-index: -1;
 }
 
 .abs-img4 {
@@ -833,12 +839,14 @@ a:hover {
     .external-bg {
         position: absolute;
         left: 0;
-        width: calc(20%); /* Ajuste conforme necessário para a largura desejada */
+        width: calc(20%);
+        /* Ajuste conforme necessário para a largura desejada */
         height: 55px;
         background-color: var(--text-primary);
-        z-index: -1; /* Garantir que fique atrás dos outros elementos */
+        z-index: -1;
+        /* Garantir que fique atrás dos outros elementos */
     }
-    
+
     .external-bg {
         width: calc(20% + 40px);
     }
