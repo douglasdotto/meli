@@ -59,46 +59,59 @@
         <div class="position-relative h-100">
             <div class="container h-100">
                 <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-5 d-flex flex-column">
-
-                        <h1 class="text-header-lb">TRIVIA</h1>
-                        <h1 class="text-header-hb" style="margin-top: -10px;">MERCADO LIVRE</h1>
-                        <p class="text-section mt-3">Seja bem-vindo à Trivia do Mercado Livre! Inspirado no clássico
-                            jogo de
-                            perguntas, aqui você vai testar conhecimentos gerais, somar pontos e, se der tudo certo,
-                            ainda pode levar <b class="text-section-bold">cupom para usar na sua próxima compra no
+                    <div class="col-12 col-md-6 d-flex flex-column my-3">
+                        <h1 class="text-header-lb text-header-2" data-aos="zoom-in" data-aos-duration="500">TRIVIA</h1>
+                        <h1 class="text-header-hb text-header-2" data-aos="zoom-in" data-aos-duration="500"
+                            style="margin-top: -10px;">MERCADO LIVRE</h1>
+                        <p class="text-section text-section-2 mt-3" data-aos="zoom-in" data-aos-duration="500">Seja
+                            bem-vindo à Trivia do Mercado Livre! Inspirado no clássico jogo de perguntas, aqui você vai
+                            testar conhecimentos gerais, somar pontos e, se der tudo certo, ainda pode levar <b
+                                class="text-section-bold text-section-2">cupom para usar na sua próxima compra no
                                 app.</b></p>
-
-                        <button class="custom-button btn-goToLink mt-3">JOGAR!</button>
                     </div>
-                    <div class="col"></div>
-                    <div class="col-5 d-flex flex-column justify-content-center">
-                        <h1 class="orientation-header h1-right">COMO JOGAR</h1>
-                        <ol class="structions-list ">
-                            <li>
-                                <p class="text-section"><b class="text-section-bold">Gire a roleta:</b> cada fatia da
-                                    roleta vai designar uma categoria. Serão 3 fases com 3 categorias diferentes em
-                                    cada.</p>
+                    <div class="col-12 col-md-6 d-flex flex-column justify-content-center my-3">
+                        <h1 class="orientation-header h1-right" data-aos="fade-left" data-aos-duration="500">COMO
+                            JOGAR
+                        </h1>
+                        <ol class="structions-list">
+                            <li data-aos="fade-left" data-aos-duration="1500">
+                                <p class="text-section">
+                                    <b class="text-section-bold">Gire a
+                                        roleta:</b> cada fatia da roleta vai designar uma categoria. Serão 3 fases
+                                    com 3
+                                    categorias diferentes em cada.
+                                </p>
                             </li>
-                            <li>
-                                <p class="text-section"><b class="text-section-bold">Responda corretamente:</b> conforme
-                                    acerta, você avança para a próxima pergunta.</p>
+                            <li data-aos="fade-left" data-aos-duration="2000">
+                                <p class="text-section">
+                                    <b class="text-section-bold">Responda
+                                        corretamente:</b> conforme acerta, você avança para a próxima pergunta.
+                                </p>
                             </li>
-                            <li>
-                                <p class="text-section"><b class="text-section-bold">Fique de olho no tempo:</b> Você
-                                    terá 20 segundos para responder cada questão.</p>
+                            <li data-aos="fade-left" data-aos-duration="2500">
+                                <p class="text-section">
+                                    <b class="text-section-bold">Fique de
+                                        olho no tempo:</b> Você terá 20 segundos para responder cada questão.
+                                </p>
                             </li>
                         </ol>
-                        <h1 class="orientation-header  h1-right">DICA DE OURO</h1>
-                        <p class="text-section"><b class="text-section-bold">MERCADO LIVRE é coringa</b> acertando
-                            qualquer pergunta dessa categoria, voce avança de fase.</p>
-
                     </div>
-                    <div class="col-1"></div>
+
+                    <div class="col-12 col-md-6 d-flex flex-column my-3">
+                        <button class="custom-button btn-goToLink" data-aos="zoom-in"
+                            data-aos-duration="1500">JOGAR!</button>
+                    </div>
+
+                    <div class="col-12 col-md-6 d-flex flex-column justify-content-center my-3">
+                        <h1 class="orientation-header h1-right" data-aos="fade-left" data-aos-duration="3000">DICA DE
+                            OURO</h1>
+                        <p class="text-section" data-aos="fade-left" data-aos-duration="3000">
+                            <b class="text-section-bold">MERCADO LIVRE é coringa</b> acertando
+                            qualquer pergunta dessa categoria, voce avança de fase.
+                        </p>
+                    </div>
                 </div>
                 <div class="container mt-4">
-
                 </div>
             </div>
             <img src="./images/Rectangle.png" class="position-absolute abs-img3">
@@ -134,24 +147,25 @@
     </div>
     <div class="question-body hidden" id="questionContainer">
         <div class="container h-100">
-            <div class="row fade-in" id="row-top">
+            <div class="row fade-in mt-5" id="row-top">
                 <div class="quiz-categoria col-6">
-                    <span id="categoria"></span>
+                    <img id="categoriaImg" src="" alt="Categoria Imagem" style="width: 35px; height: 35px;">
+                    <span class="ms-3" id="categoria"></span>
                 </div>
-                <div class="quiz-tempo col-3">
+                <div class="quiz-tempo ms-auto col-3">
                     <span class="time-prefix">00:</span>
                     <span id="tempo">20</span>
                 </div>
-                <div class="quiz-vida col-3">
+                <div class="quiz-vida ms-1 col-3">
                     <span>💙</span>
                     <span id="vidas">3</span>
                 </div>
             </div>
 
-            <div class="row fade-in" id="row-pergunta">
+            <div class="row fade-in my-5" id="row-pergunta">
                 <div class="pergunta-quiz col-12" id="pergunta">
                 </div>
-                <div class="col-12" id="alternativas">
+                <div class="col-12 mt-3" id="alternativas">
                 </div>
             </div>
         </div>
@@ -187,6 +201,7 @@
     <script>
         // 1° Página
         $(document).ready(function () {
+            AOS.init();
             $(".btn-goToLink").on("click", function () {
                 $("#triviaContainer").addClass("hidden");
                 $("#roletaContainer").removeClass("hidden");
@@ -292,7 +307,11 @@
                 // Mostrar a categoria e as vidas
                 $('#row-top').removeClass('hidden');
                 $('#row-pergunta').removeClass('hidden');
-                $("#categoria").html(`${categoria}`);
+                const questao = options.find(pergunta => pergunta.categoria === categoria);
+                console.log(questao);
+                // Definir a categoria e a imagem da categoria
+                $("#categoria").html(questao.categoria);
+                $("#categoriaImg").attr("src", questao.imgSrc);
                 $('#tempo').html('20');
 
                 // Mostrar a pergunta

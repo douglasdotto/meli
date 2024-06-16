@@ -110,6 +110,7 @@ a:hover {
     color: var(--secondary);
     /* Optional: Using the secondary color for text */
     font-size: 15px;
+    font-family: "proxima_nova_bold";
     /* Optional: Increases the font size */
     text-align: center;
     /* Centers the text inside the div */
@@ -157,6 +158,11 @@ a:hover {
     line-height: 54px;
 }
 
+.text-header-2 {
+    font-size: 50px !important;
+    line-height: 58px !important;
+}
+
 .text-header-hb {
     font-family: 'proxima_nova_bold';
     color: var(--ml-text-color);
@@ -195,6 +201,11 @@ a:hover {
     font-size: 20px;
     font-weight: 400;
     line-height: 26px;
+}
+
+.text-section-2 {
+    font-size: 24px !important;
+    line-height: 28px !important;
 }
 
 .text-section-bold {
@@ -248,7 +259,7 @@ a:hover {
 }
 
 .roleta-container {
-    width: 450px;
+    width: 400px;
     height: 575px;
     display: flex;
     justify-content: center;
@@ -336,7 +347,6 @@ a:hover {
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    box-shadow: 0 0px 24px 0px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -495,18 +505,24 @@ a:hover {
 }
 
 .alternativa {
-    font-size: 32px;
-    margin-left: 40px;
-    font-weight: 700;
+    font-size: 26px !important;
+    font-family: "proxima_nova_bold";
     line-height: 54px;
     color: var(--text-primary);
     /* Keeps the text color of the second button black */
     border-radius: 20px !important;
     padding: 5px 20px;
-    /* Adjust the padding as needed */
-    max-width: 200px;
-    min-width: 160px;
     white-space: nowrap;
+    transition: 1s;
+}
+
+.alternativa:not(:first-child) {
+    margin-left: 10px;
+}
+
+.alternativa:hover {
+    background-color: var(--ml-light-blue) !important;
+    transition: 1s;
 }
 
 .quiz-tempo {
@@ -514,12 +530,21 @@ a:hover {
     align-items: center;
     justify-content: center;
     border: 1px solid #000;
-    /* Borda de 1px sólida */
     border-radius: 15px;
-    /* Raio de 15px */
-    padding: 10px;
-    /* Espaçamento interno para ajustar o tamanho da borda */
     max-width: 90px;
+    font-size: 20px;
+    font-family: "proxima_nova_bold";
+}
+
+.quiz-vida {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    border-radius: 15px;
+    max-width: 90px;
+    font-size: 20px;
+    font-family: "proxima_nova_bold";
 }
 
 .question-body {
@@ -528,16 +553,16 @@ a:hover {
 
 .quiz-categoria {
     background-color: var(--text-primary);
-    /* Cor de fundo cinza */
     padding: 10px;
-    /* Espaçamento interno */
     max-width: 200px;
     display: flex;
-    /* Alinhamento dos itens em linha */
-    align-items: right;
-    /* Centralização vertical dos itens */
     color: var(--secondary);
-    /* Cor do texto branca */
+    align-items: center;
+}
+
+#categoria {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .icon-placeholder {
@@ -630,8 +655,7 @@ a:hover {
 }
 
 .abs-img3 {
-    left: 0;
-    bottom: 25rem;
+    left: -40px;
 }
 
 .abs-img4 {
@@ -716,8 +740,8 @@ a:hover {
 }
 
 .btn-goToLink:hover {
-    transform: scale(1.1);
-    transition: 1s;
+    transform: scale(1.1) !important;
+    transition: 1s !important;
 }
 
 .btn-true {
@@ -748,9 +772,13 @@ a:hover {
     max-width: 300px;
 }
 
+.abs-img3 {
+    top: 15px;
+}
 
-
-
+.site-hey {
+    color: #fff;
+}
 
 /* Media Queries to adjust font size based on the width of the viewport */
 @media (max-width: 1400px) {
@@ -773,10 +801,6 @@ a:hover {
 
     .img-title {
         font-size: 44px;
-    }
-
-    .abs-img3 {
-        bottom: 26.5rem;
     }
 }
 
@@ -801,12 +825,6 @@ a:hover {
     .img-title {
         font-size: 36px;
     }
-
-    .abs-img3 {
-        bottom: 30rem;
-    }
-
-
 }
 
 @media (max-width: 992px) {
@@ -826,10 +844,6 @@ a:hover {
 
     .img-title {
         font-size: 27px;
-    }
-
-    .abs-img3 {
-        bottom: 40rem;
     }
 }
 
