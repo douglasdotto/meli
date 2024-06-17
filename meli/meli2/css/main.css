@@ -527,9 +527,9 @@ a:hover {
 .pergunta-quiz {
     font-family: 'proxima_nova_bold';
     text-transform: uppercase;
-    font-size: 42px;
+    font-size: 38px;
     font-weight: 700;
-    line-height: 56px;
+    line-height: 48px;
     text-align: left;
     color: var(--text-primary);
 }
@@ -947,6 +947,10 @@ a:hover {
 
     .external-bg {
         width: calc(20% + 90px);
+    }
+
+    .alternativa:not(:first-child) {
+        margin-left: 0px !important;
     }
 }
 
