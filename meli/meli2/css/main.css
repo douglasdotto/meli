@@ -27,6 +27,34 @@
     font-style: normal;
 }
 
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #ffe30b;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #ffd100;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffd100;
+}
+
 :root {
     /*Gshow*/
     --gshow-primary: #FF6700;
@@ -43,6 +71,7 @@
 }
 
 html {
+    overflow-x: hidden !important;
     overflow-y: scroll;
 }
 
@@ -497,6 +526,7 @@ a:hover {
 
 .pergunta-quiz {
     font-family: 'proxima_nova_bold';
+    text-transform: uppercase;
     font-size: 42px;
     font-weight: 700;
     line-height: 56px;
@@ -513,6 +543,7 @@ a:hover {
     border-radius: 20px !important;
     padding: 5px 20px;
     white-space: nowrap;
+    min-width: 200px;
     transition: 0.5s;
 }
 
@@ -528,7 +559,8 @@ a:hover {
 .external-bg {
     position: absolute;
     left: 0;
-    width: calc(25%); /* Ajuste conforme necessário para a largura desejada */
+    width: calc(25%);
+    /* Ajuste conforme necessário para a largura desejada */
     height: 55px;
     background-color: var(--text-primary);
     z-index: -1;
@@ -722,20 +754,62 @@ a:hover {
 
 }
 
-.btn-goToLink {
-    background-color: var(--ml-light-blue);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 54px;
-    color: var(--secondary);
-    /* Keeps the text color of the second button black */
-    border-radius: 15px;
-    padding: 5px 20px;
-    /* Adjust the padding as needed */
-    max-width: 200px;
-    max-height: 60px;
-    white-space: nowrap;
-    transition: 1s;
+.swal2-popup {
+    border-radius: 20px;
+}
+
+.swal-bold {
+    font-family: "proxima_nova_bold";
+    color: #000;
+    line-height: 24px;
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.swal-regular {
+    color: #000;
+    line-height: 24px;
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.swal2-html-container {
+    margin-top: 40px !important;
+}
+
+.btn-goToLink,
+.swal2-confirm,
+.swal2-cancel {
+    background-color: var(--ml-light-blue) !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    line-height: 54px !important;
+    color: var(--secondary) !important;
+    border-radius: 15px !important;
+    padding: 5px 20px !important;
+    max-height: 60px !important;
+    white-space: nowrap !important;
+    transition: 1s !important;
+}
+
+.swal2-confirm,
+.swal2-cancel {
+    font-size: 20px !important;
+    padding: 0px 20px !important;
+}
+
+.swal2-confirm:focus,
+.swal2-cancel:focus {
+    box-shadow: none !important;
+}
+
+.swal2-actions {
+    width: 100%;
+    justify-content: flex-start;
+    margin-left: 20px;
+    margin-top: 5px;
 }
 
 .btn-goToLink:hover {

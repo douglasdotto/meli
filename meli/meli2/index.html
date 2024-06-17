@@ -100,8 +100,8 @@
                     </div>
 
                     <div class="col-12 col-md-6 d-flex flex-column my-3">
-                        <button class="custom-button btn-goToLink" data-aos="zoom-in"
-                            data-aos-duration="1500">JOGAR!</button>
+                        <button class="custom-button btn-goToLink" data-aos="zoom-in" data-aos-duration="1500"
+                            style="max-width: 170px;">JOGAR!</button>
                     </div>
 
                     <div class="col-12 col-md-6 d-flex flex-column justify-content-center my-3">
@@ -151,7 +151,7 @@
     <div class="question-body hidden" id="questionContainer">
         <div class="container h-100">
             <div class="row row-abs fade-in mt-5" id="row-top">
-                
+
                 <div class="quiz-categoria col-6">
                     <img id="categoriaImg" src="" alt="Categoria Imagem" style="width: 35px; height: 35px;">
                     <span class="ms-2 me-3" id="categoria"></span>
@@ -209,6 +209,7 @@
         // 1° Página
         $(document).ready(function () {
             AOS.init();
+
             $(".btn-goToLink").on("click", function () {
                 $("#triviaContainer").addClass("hidden");
                 $("#roletaContainer").removeClass("hidden");
@@ -228,19 +229,19 @@
 
         const perguntas = {
             "esporte": [
-                { pergunta: "Qual é o esporte mais popular do mundo?", alternativas: ["Futebol", "Basquete", "Tênis", "Críquete"], correta: "Futebol" },
-                { pergunta: "Em qual ano o Brasil ganhou a Copa do Mundo pela primeira vez?", alternativas: ["1958", "1962", "1970", "1994"], correta: "1958" },
-                { pergunta: "Quem é conhecido como 'Pelé' do Futebol?", alternativas: ["Edson Arantes do Nascimento", "Zico", "Romário", "Ronaldinho"], correta: "Edson Arantes do Nascimento" }
+                { pergunta: "Quando será a próxima Copa do Mundo?", alternativas: ["2028", "2026", "2032", "2035"], correta: "2026" },
+                { pergunta: "Em qual esporte você faria um ‘touchdown’?", alternativas: ["Rugby", "Lacrosse", "Futebol Americano", "Basebol"], correta: "Futebol Americano" },
+                { pergunta: "Quantos jogadores há em um time de futebol?", alternativas: ["11", "9", "10", "12"], correta: "11" }
             ],
             "cultura pop": [
-                { pergunta: "Qual é o nome do bruxo protagonista em Harry Potter?", alternativas: ["Harry Potter", "Ron Weasley", "Hermione Granger", "Albus Dumbledore"], correta: "Harry Potter" },
-                { pergunta: "Qual é a capital de Westeros em Game of Thrones?", alternativas: ["King's Landing", "Winterfell", "Riverrun", "Casterly Rock"], correta: "King's Landing" },
-                { pergunta: "Quem é o super-herói mais popular da Marvel?", alternativas: ["Homem-Aranha", "Homem de Ferro", "Capitão América", "Thor"], correta: "Homem-Aranha" }
+                { pergunta: "Qual o nome que se dá a quem escreve novelas e séries de TV?", alternativas: ["Romancista", "Poeta", "Ensaista", "Dramaturgo"], correta: "Dramaturgo" },
+                { pergunta: "Qual o gênero musical popular do Brasil?", alternativas: ["Sertanejo", "Funk", "MPB", "Pop"], correta: "MPB" },
+                { pergunta: "Quem foi a campeã do Carnaval do Rio de Janeiro em 2018?", alternativas: ["Salgueiro", "Mangueira", "Portela", "Beija-flor"], correta: "Beija-flor" },
             ],
             "história": [
-                { pergunta: "Quem foi o primeiro presidente dos EUA?", alternativas: ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "John Adams"], correta: "George Washington" },
-                { pergunta: "Em que ano a Primeira Guerra Mundial começou?", alternativas: ["1914", "1918", "1939", "1945"], correta: "1914" },
-                { pergunta: "Qual civilização construiu as pirâmides do Egito?", alternativas: ["Egípcios", "Maias", "Astecas", "Incas"], correta: "Egípcios" }
+                { pergunta: "Qual é a capital da nação brasileira?", alternativas: ["RJ", "SP", "DF", "BA"], correta: "DF" },
+                { pergunta: "Quantos anos tem a cidade de São Paulo?", alternativas: ["400 anos", "450 anos", "470 anos", "520 anos"], correta: "470 anos" },
+                { pergunta: "Em qual país as vacas são consideradas animais sagrados?", alternativas: ["China", "Índia", "Japão", "Coreia do Sul"], correta: "Índia" }
             ]
         };
 
@@ -285,21 +286,22 @@
             }, 4000);
         };
 
-        const mostrarPergunta = (categoria, indexPergunta) => {
-            if (indexPergunta === undefined) {
-                indexPergunta = perguntasRespondidas[categoria];
-            }
+        const mostrarPergunta = (categoria, timeout = 2000) => {
+            var indexPergunta = perguntasRespondidas[categoria];
 
             if (indexPergunta >= perguntas[categoria].length) {
                 setTimeout(() => {
                     Swal.fire({
-                        title: 'Fim de jogo!',
+                        html: "<p class='swal-bold'>Arrasou! 🥳</p><p class='swal-regular'>Você acertou a maioria das perguntas e venceu esse game. <span class='swal-bold'>E o melhor está chegando, viu?</span> Tá na mão o seu <span class='swal-bold'>cupom de desconto</span> para usar em sua <span class='swal-bold'>próxima compra no app do Mercado Livre!</span></p>",
                         text: 'Você respondeu todas as perguntas desta categoria.',
-                        icon: 'info',
-                        confirmButtonText: 'OK'
+                        showCancelButton: true,
+                        confirmButtonText: 'RESGATAR CUPOM',
+                        cancelButtonText: 'JOGAR NOVAMENTE'
                     }).then((result) => {
                         if (result.isConfirmed) {
                             // Aqui você pode adicionar alguma lógica adicional se necessário
+                        } else {
+                            location.reload();
                         }
                     });
                     return;
@@ -317,7 +319,6 @@
                 $('#row-top').removeClass('hidden');
                 $('#row-pergunta').removeClass('hidden');
                 const questao = options.find(pergunta => pergunta.categoria === categoria);
-                console.log(questao);
                 // Definir a categoria e a imagem da categoria
                 $("#categoria").html(questao.categoria);
                 $("#categoriaImg").attr("src", questao.imgSrc);
@@ -333,6 +334,7 @@
                 perguntaAtual.alternativas.forEach(alternativa => {
                     const alternativaElement = $('<button>').addClass('custom-button alternativa').text(alternativa);
                     alternativaElement.on('click', () => {
+                        $(".alternativa").prop("disabled", true);
                         if (alternativa === perguntaAtual.correta) {
                             alternativaElement.append('👍');
                             alternativaElement.addClass('acerto');
@@ -346,10 +348,8 @@
                             atualizarVidas();
                             if (vidas === 0) {
                                 Swal.fire({
-                                    title: 'Game Over!',
-                                    text: 'Você perdeu todas as vidas.',
-                                    icon: 'error',
-                                    confirmButtonText: 'OK'
+                                    html: "<p class='swal-bold'>Ah, não foi dessa vez 🙁</p><p class='swal-bold'>Mas o seu melhor está chegando!</p>",
+                                    confirmButtonText: 'TENTE NOVAMENTE'
                                 }).then((result) => {
                                     if (result.isConfirmed) {
                                         location.reload();
@@ -368,34 +368,27 @@
                 let tempoRestante = 20;
                 const tempoInterval = setInterval(() => {
                     tempoRestante--;
-                    $('#tempo').html(tempoRestante);
+                    $('#tempo').html(tempoRestante <= 9 ? "0" + tempoRestante : tempoRestante);
                     if (tempoRestante <= 0) {
                         clearInterval(tempoInterval);
-                        Swal.fire({
-                            title: 'Tempo esgotado!',
-                            text: 'Você não respondeu a tempo.',
-                            icon: 'info',
-                            confirmButtonText: 'OK'
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                vidas--;
-                                atualizarVidas();
-                                if (vidas === 0) {
-                                    Swal.fire({
-                                        title: 'Game Over!',
-                                        text: 'Você perdeu todas as vidas.',
-                                        icon: 'error',
-                                        confirmButtonText: 'OK'
-                                    }).then((result) => {
-                                        if (result.isConfirmed) {
-                                            location.reload();
-                                        }
-                                    });
-                                } else {
-                                    mostrarPergunta(categoria);
-                                }
-                            }
-                        });
+                        if (vidas === 0) {
+                            Swal.fire({
+                                html: "<p class='swal-bold'>Ah, não foi dessa vez 🙁</p><p class='swal-bold'>Mas o seu melhor está chegando!</p>",
+                                confirmButtonText: 'TENTE NOVAMENTE'
+                            }).then((result) => {
+                                location.reload();
+                            });
+                        } else {
+                            vidas--;
+                            atualizarVidas();
+                            Swal.fire({
+                                html: "<p class='swal-bold'>Tempo esgotado! 🙁</p><p class='swal-regular'>Você não respondeu a tempo e perdeu <span class='swal-bold'>uma vida!</span></p>",
+                                confirmButtonText: 'SEGUIR'
+                            }).then((result) => {
+                                perguntasRespondidas[categoria]++;
+                                mostrarPergunta(categoria, 0);
+                            });
+                        }
                     }
                 }, 1000);
 
@@ -403,7 +396,7 @@
                 alternativasContainer.on('click', () => {
                     clearInterval(tempoInterval);
                 });
-            }, 2000);
+            }, timeout);
         };
 
         const atualizarVidas = () => {
