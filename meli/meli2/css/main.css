@@ -989,3 +989,14 @@ a:hover {
         line-height: 46px !important;
     }
 }
+
+@media (max-width: 530px) {
+    .roleta-container {
+        margin-left: -40px !important;
+    }
+
+    .quiz-tempo,
+    .quiz-vida {
+        max-width: 70px !important;
+    }
+}
