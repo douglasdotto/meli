@@ -27,32 +27,20 @@
     font-style: normal;
 }
 
-
-/* width */
-
 ::-webkit-scrollbar {
     width: 10px;
 }
 
-
-/* Track */
-
 ::-webkit-scrollbar-track {
-    background: #ffe30b;
+    background: var(--confirmation-btn);
 }
-
-
-/* Handle */
 
 ::-webkit-scrollbar-thumb {
-    background: #ffd100;
+    background: var(--confirmation-btn);
 }
 
-
-/* Handle on hover */
-
 ::-webkit-scrollbar-thumb:hover {
-    background: #ffd100;
+    background: var(--ml-text-color);
 }
 
 :root {
@@ -120,12 +108,8 @@ a {
 
 a:hover {
     color: var(--secondary);
-    /* Changes the color on hover to the secondary color */
     text-decoration: underline;
-    /* Adds an underline on hover for better visibility */
 }
-
-/* Menu options section*/
 
 .menu-links {
     font-weight: 400;
@@ -135,40 +119,9 @@ a:hover {
 
 .special-ad {
     background-color: var(--special-ad);
-    /* Using the primary color variable defined in :root */
     color: var(--secondary);
-    /* Optional: Using the secondary color for text */
     font-size: 15px;
     font-family: "proxima_nova_bold";
-    /* Optional: Increases the font size */
-    text-align: center;
-    /* Centers the text inside the div */
-}
-
-/* Quiz Section*/
-
-.quiz-header {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: center;
-}
-
-.quiz-counter {
-    background-color: var(--text-primary);
-    /* Using the primary color variable defined in :root */
-    color: var(--secondary);
-    /* Optional: Using the secondary color for text */
-    font-size: 15px;
-    /* Optional: Increases the font size */
-    text-align: center;
-    /* Centers the text inside the div */
-}
-
-.quiz-quest {
-    font-size: 29px;
-    font-weight: 700;
-    line-height: 30px;
     text-align: center;
 }
 
@@ -209,23 +162,6 @@ a:hover {
     margin-bottom: -5px;
 }
 
-.video-player {
-    border-radius: 30px;
-}
-
-.video_title {
-    font-family: 'proxima_nova_bold';
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 28px;
-}
-
-.video-desc {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 28px;
-}
-
 .text-section {
     font-size: 20px;
     font-weight: 400;
@@ -244,13 +180,6 @@ a:hover {
     font-family: 'proxima_nova_bold';
 }
 
-.video-text-header {
-    font-family: 'proxima_nova_bold';
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
-}
-
 .h1-right {
     position: relative;
     padding-left: 40px;
@@ -264,15 +193,10 @@ a:hover {
     top: 50%;
     transform: translateY(-50%);
     width: 25px;
-    /* Adjust the size of the square as needed */
     height: 25px;
-    /* Adjust the size of the square as needed */
     background-color: var(--ml-light-blue);
-    /* Color of the square */
 }
 
-
-/*Roleta*/
 .roleta-body {
     background-color: var(--secondary) !important;
 }
@@ -485,6 +409,7 @@ a:hover {
     color: #fff;
     font-family: "proxima_nova_bold";
     font-size: 24px;
+    line-height: 20px;
 }
 
 @keyframes fadeOut {
@@ -1040,6 +965,32 @@ a:hover {
 
     .video-paragraph {
         text-align: center;
+    }
 
+    .text-section-2 {
+        font-size: 20px !important;
+        line-height: 26px !important;
+    }
+
+    .text-header-hb,
+    .text-header-lb {
+        font-size: 38px !important;
+        line-height: 40px !important;
+    }
+
+    .roleta-container {
+        transform: scale(0.8);
+        margin-top: -80px !important;
+        margin-left: -15px !important;
+    }
+
+    .pergunta-quiz {
+        font-size: 28px !important;
+        line-height: 38px !important;
+    }
+
+    .alternativa {
+        width: 100% !important;
+        line-height: 46px !important;
     }
 }
