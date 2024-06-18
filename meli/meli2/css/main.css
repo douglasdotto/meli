@@ -484,7 +484,7 @@ a:hover {
 .external-bg {
     position: absolute;
     left: 0;
-    width: calc(25%);
+    width: calc(30%);
     /* Ajuste conforme necessário para a largura desejada */
     height: 55px;
     background-color: var(--text-primary);
@@ -837,18 +837,13 @@ a:hover {
     .external-bg {
         position: absolute;
         left: 0;
-        width: calc(20%);
+        width: calc(30% + 40px);
         /* Ajuste conforme necessário para a largura desejada */
         height: 55px;
         background-color: var(--text-primary);
         z-index: -1;
         /* Garantir que fique atrás dos outros elementos */
     }
-
-    .external-bg {
-        width: calc(20% + 40px);
-    }
-
 }
 
 @media (max-width: 992px) {
