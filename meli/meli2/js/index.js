@@ -46,7 +46,7 @@ const perguntas = {
         { pergunta: "Quem foi a campeã do Carnaval do Rio de Janeiro em 2018?", alternativas: ["Salgueiro", "Mangueira", "Portela", "Beija-flor"], correta: "Beija-flor" },
     ],
     "história": [
-        { pergunta: "Qual é a capital da nação brasileira?", alternativas: ["RJ", "SP", "DF", "BA"], correta: "DF" },
+        { pergunta: "Qual é a capital da nação brasileira?", alternativas: ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"], correta: "Brasília" },
         { pergunta: "Quantos anos tem a cidade de São Paulo?", alternativas: ["400 anos", "450 anos", "470 anos", "520 anos"], correta: "470 anos" },
         { pergunta: "Em qual país as vacas são consideradas animais sagrados?", alternativas: ["China", "Índia", "Japão", "Coreia do Sul"], correta: "Índia" }
     ],
@@ -63,10 +63,11 @@ const perguntas = {
     "arte": [
         { pergunta: "O movimento artístico que colocou o ser humano no centro do universo foi:", alternativas: ["Barroco", "Romantismo", "Renascentismo", "Surrealismo"], correta: "Renascentismo" },
         { pergunta: "Qual desses movimentos simbolizou a cultura das massas nos anos 1960?", alternativas: ["Pop Art", "Impressionismo", "Dadaísmo", "Cubismo"], correta: "Pop Art" },
-        { pergunta: "Qual o nome que se dá a artistas que se colocam à frente de seu tempo?", alternativas: ["Modernos", "Vanguarda", "Sábios", "Criativos"], correta: "Modernos" }
+        { pergunta: "Qual o nome que se dá a artistas que se colocam à frente de seu tempo?", alternativas: ["Modernos", "Vanguarda", "Sábios", "Criativos"], correta: "Vanguarda" }
     ],
     "Mercado Livre ": [
         { pergunta: "Qual o nome do programa de benefícios do Mercado Livre e Mercado Pago?", alternativas: ["Mercado Livre Pontos", "Meli+", "Meli Benefícios", "Mercado Livre Premium"], correta: "Meli+" },
+        { pergunta: "Quantos colaboradores o Mercado Livre emprega atualmente?", alternativas: ["40 mil", "58 mil", "30 mil", "70 mil"], correta: "58 mil" },
         { pergunta: "Em qual região o Mercado Livre exerce liderança em seu segmento?", alternativas: ["América do Norte", "América Latina", "Europa", "Ásia"], correta: "América Latina" },
         { pergunta: "Em que ano o Mercado Livre entrou para a lista das 100 marcas mais influentes do mundo pela TIME?", alternativas: ["2012", "2023", "2020", "2016"], correta: "2023" },
     ],
@@ -142,6 +143,7 @@ const mostrarPergunta = (categoria, timeout = 2000) => {
                 Swal.fire({
                     html: "<p class='swal-bold'>Mandou bem, hein? 🤩</p><p class='swal-bold'>Pronto para a próxima fase?</p>",
                     confirmButtonText: 'AVANÇAR',
+                    heightAuto: false
                 }).then((result) => {
                     $('#btnSpin').attr('disabled', false);
 
@@ -157,7 +159,8 @@ const mostrarPergunta = (categoria, timeout = 2000) => {
                     html: "<p class='swal-bold'>Arrasou! 🥳</p><p class='swal-regular'>Você acertou a maioria das perguntas e venceu esse game. <span class='swal-bold'>E o melhor está chegando, viu?</span> Tá na mão o seu <span class='swal-bold'>cupom de desconto</span> para usar em sua <span class='swal-bold'>próxima compra no app do Mercado Livre!</span></p>",
                     showCancelButton: true,
                     confirmButtonText: 'RESGATAR CUPOM',
-                    cancelButtonText: 'JOGAR NOVAMENTE'
+                    cancelButtonText: 'JOGAR NOVAMENTE',
+                    heightAuto: false
                 }).then((result) => {
                     if (result.isConfirmed) {
                         // Aqui você pode adicionar alguma lógica adicional se necessário
@@ -174,7 +177,7 @@ const mostrarPergunta = (categoria, timeout = 2000) => {
     setTimeout(() => {
         $('.roleta-body').addClass('hidden');
         $('.question-body').removeClass('hidden');
-    }, 2000);
+    }, timeout);
 
     setTimeout(() => {
         // Mostrar a categoria e as vidas
@@ -193,7 +196,7 @@ const mostrarPergunta = (categoria, timeout = 2000) => {
 
         // Mostrar as alternativas
         const alternativasContainer = $('#alternativas').empty();
-        perguntaAtual.alternativas.forEach(alternativa => {
+        perguntaAtual.alternativas.forEach((alternativa, index) => {
             const alternativaElement = $('<button>').addClass('custom-button alternativa my-2 my-md-3').text(alternativa);
             alternativaElement.on('click', () => {
                 $(".alternativa").prop("disabled", true);
@@ -209,6 +212,7 @@ const mostrarPergunta = (categoria, timeout = 2000) => {
                             Swal.fire({
                                 html: "<p class='swal-bold'>Mandou bem, hein? 🤩</p><p class='swal-bold'>Pronto para a próxima fase?</p>",
                                 confirmButtonText: 'AVANÇAR',
+                                heightAuto: false
                             }).then((result) => {
                                 $('#btnSpin').attr('disabled', false);
                                 $('.roleta-body').removeClass('hidden');
@@ -221,7 +225,8 @@ const mostrarPergunta = (categoria, timeout = 2000) => {
                                 html: "<p class='swal-bold'>Arrasou! 🥳</p><p class='swal-regular'>Você acertou a maioria das perguntas e venceu esse game. <span class='swal-bold'>E o melhor está chegando, viu?</span> Tá na mão o seu <span class='swal-bold'>cupom de desconto</span> para usar em sua <span class='swal-bold'>próxima compra no app do Mercado Livre!</span></p>",
                                 showCancelButton: true,
                                 confirmButtonText: 'RESGATAR CUPOM',
-                                cancelButtonText: 'JOGAR NOVAMENTE'
+                                cancelButtonText: 'JOGAR NOVAMENTE',
+                                heightAuto: false
                             }).then((result) => {
                                 if (result.isConfirmed) {
                                     // Aqui você pode adicionar alguma lógica adicional se necessário
@@ -243,15 +248,22 @@ const mostrarPergunta = (categoria, timeout = 2000) => {
                     if (vidas === 0) {
                         Swal.fire({
                             html: "<p class='swal-bold'>Ah, não foi dessa vez 🙁</p><p class='swal-bold'>Mas o seu melhor está chegando!</p>",
-                            confirmButtonText: 'TENTE NOVAMENTE'
+                            confirmButtonText: 'TENTE NOVAMENTE',
+                            heightAuto: false
                         }).then((result) => {
                             if (result.isConfirmed) {
                                 location.reload();
                             }
                         });
                     } else {
-                        perguntasRespondidas[categoria]++;
-                        mostrarPergunta(categoria);
+                        Swal.fire({
+                            html: "<p class='swal-bold'>Ih! Tente outra vez! 😢</p><p class='swal-bold'>Você ainda tem " + vidas + " vida" + (vidas == 1 ? "" : "s") + ".</p>",
+                            confirmButtonText: 'TENTE NOVAMENTE',
+                            heightAuto: false
+                        }).then((result) => {
+                            perguntasRespondidas[categoria];
+                            mostrarPergunta(categoria, 0);
+                        });
                     }
                 }
             });
@@ -268,7 +280,8 @@ const mostrarPergunta = (categoria, timeout = 2000) => {
                 if (vidas === 0) {
                     Swal.fire({
                         html: "<p class='swal-bold'>Ah, não foi dessa vez 🙁</p><p class='swal-bold'>Mas o seu melhor está chegando!</p>",
-                        confirmButtonText: 'TENTE NOVAMENTE'
+                        confirmButtonText: 'TENTE NOVAMENTE',
+                        heightAuto: false
                     }).then((result) => {
                         location.reload();
                     });
@@ -277,9 +290,10 @@ const mostrarPergunta = (categoria, timeout = 2000) => {
                     atualizarVidas();
                     Swal.fire({
                         html: "<p class='swal-bold'>Tempo esgotado! 🙁</p><p class='swal-regular'>Você não respondeu a tempo e perdeu <span class='swal-bold'>uma vida!</span></p>",
-                        confirmButtonText: 'SEGUIR'
+                        confirmButtonText: 'SEGUIR',
+                        heightAuto: false
                     }).then((result) => {
-                        perguntasRespondidas[categoria]++;
+                        perguntasRespondidas[categoria];
                         mostrarPergunta(categoria, 0);
                     });
                 }
