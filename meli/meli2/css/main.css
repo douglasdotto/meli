@@ -493,8 +493,7 @@ a:hover {
 }
 
 .quiz-categoria {
-    background-color: transparent;
-    /* Remover o fundo pois a div externa já cobre isso */
+    background-color: var(--text-primary);
     padding: 10px;
     display: flex;
     color: var(--secondary);
