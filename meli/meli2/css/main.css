@@ -498,6 +498,7 @@ a:hover {
     display: flex;
     color: var(--secondary);
     align-items: center;
+    max-width: 300px;
 }
 
 .quiz-tempo,
