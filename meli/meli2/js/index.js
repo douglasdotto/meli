@@ -229,7 +229,8 @@ const mostrarPergunta = (categoria, timeout = 2000) => {
                                 heightAuto: false
                             }).then((result) => {
                                 if (result.isConfirmed) {
-                                    // Aqui você pode adicionar alguma lógica adicional se necessário
+                                    window.open('https://www.example.com', '_blank'); // Substitua pelo link desejado
+                                    location.reload();
                                 } else {
                                     location.reload();
                                 }
