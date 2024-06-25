@@ -94,6 +94,59 @@
 
     <div class="mt-5"></div>
 
+    <!--corpo 2-->
+    <div class="secondary-body py-5 position-relative justify-content-center text-center" id="mion2">
+        <div class="mt-4">
+            <div class="row my-5">
+                <div class="d-flex flex-column justify-content-center text-center">
+                    <h4 data-aos="fade-in" data-aos-duration="1250" class="text-header1-yl marquee" data-text="TOC, TOC! Chegou Mercado Livre aqui! TOC, TOC! Chegou Mercado Livre aqui! "></h4>
+                </div>
+                <div class="col-1"></div>
+               
+                <div class="mt-4 col-10 d-flex flex-column justify-content-center text-center">
+                         <p data-aos="fade-in" data-aos-duration="2250" class="text-p1">Tem gente aproveitando a variedade de produtos e descontos com a entrega mais rápida do Brasil.
+                            <b class="text-p1-bold">Dá o play para conferir os recebidos famosinhos do Mercado Livre!</b>
+                        </p>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="item">
+                <div class="video-player mb -5" id="main-video" data-aos="flip-left"
+                    data-aos-duration="1250">
+                </div>               
+            </div>
+        </div>
+    </div>
+    <!--corpo 3-->
+    <div class="secondary-body py-5 position-relative" id="mion3" style="margin-top: -1px;">
+        <div class="container mb-3">
+            <div class="row">
+                <div class="col-0 col-lg-1"></div>
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center my-4">
+                    <p class="video-text-header-cs" data-aos="fade-right" data-aos-duration="1250">Entregue seu conhecimento 🤓</p>
+                    <p class="video-paragraph-cs mt-2" data-aos="fade-right" data-aos-duration="2500">
+                        Agora é sua vez de entregar, mas a categoria é: conhecimentos gerais! Gire a roleta, responda as perguntas de cada tema e mostre que você é digno de receber
+                        <b class="video-paragraph-bold-cs">cupom de desconto</b> 
+                        para usar no Mercado Livre.
+                    </p>
+                    <div class="col-12 col-md-12 d-flex flex-column align-items-center align-items-md-start my-5 my-md-2 order-5 order-md-4 btn-play-container">
+                        <button class="btn-play" data-aos="zoom-in" data-aos-duration="1500" style="max-width: 170px;">
+                            JOGAR!
+                        </button>
+                    </div>
+                </div>
+                <div class="col-0 col-lg-1"></div>
+                <div class="col-12 col-lg-3 my-4 d-flex justify-content-center align-items-center">
+                    <img data-aos="fade-in" data-aos-duration="1250" class="img-fluid img-ml"
+                    src="./images/roleta.png" alt="Description of the first image">
+                </div>
+                <div class="col-0 col-lg-1"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!--Positioned Absolutely -->
+
     <div class="container my-5 position-relative">
         <div class="row my-5">
             <div class="col-1"></div>
@@ -345,6 +398,15 @@
             a = b.getElementsByTagName(c)[0];
             a.parentNode.insertBefore(d, a);
         })();
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var marquee = document.getElementById("marquee");
+            var text = "TOC, TOC! Chegou Mercado Livre aqui! TOC, TOC! Chegou Mercado Livre aqui!";
+            var span = document.createElement("span");
+            span.innerText = text;
+            marquee.appendChild(span);
+        });
+
     </script>
 </body>
 
