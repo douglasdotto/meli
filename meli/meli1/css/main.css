@@ -132,6 +132,10 @@ a:hover {
 }
 
 /* Video Section*/
+#video,
+#video .clappr-player {
+    min-height: 600px !important;
+}
 
 .video-player {
     background-color: #000;
@@ -142,11 +146,14 @@ a:hover {
 
 /* Estilos para o vídeo */
 .video-player-fw {
-    width: calc(100% - 40px); /* Margem de 20px em cada lado */
+    width: calc(100% - 40px);
+    /* Margem de 20px em cada lado */
     margin: 0 20px;
-    height: 60vh; /* 60% da altura da viewport */
-    background: #000; /* Cor de fundo, ajuste conforme necessário */
-  }
+    height: 60vh;
+    /* 60% da altura da viewport */
+    background: #000;
+    /* Cor de fundo, ajuste conforme necessário */
+}
 
 .clappr-player {
     min-height: 350px !important;
@@ -221,7 +228,8 @@ a:hover {
     max-height: 60px !important;
     white-space: nowrap !important;
     transition: 1s !important;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25); /* Adiciona a sombra */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    /* Adiciona a sombra */
 
 }
 
@@ -449,34 +457,38 @@ a:hover {
     margin-top: -150px;
 }
 
-    /* Estilos para o letreiro */
-    .marquee {
-        overflow: hidden;
-        white-space: nowrap;
-        box-sizing: border-box;
-        position: relative;
-        width: calc(100% - 40px); /* Margem de 20px em cada lado */
-        margin: 0 20px;
-        height: 1.5em; /* Ajuste conforme necessário para garantir que o texto não corte */
-        line-height: 1.5em; /* Ajuste conforme necessário para garantir que o texto não corte */
-    }
-  
-    .marquee::before {
-        content: attr(data-text);
-        position: absolute;
-        white-space: nowrap;
-        will-change: transform;
-        animation: marquee 15s linear infinite;
-    }
-  
-    @keyframes marquee {
-        0% {
+/* Estilos para o letreiro */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: relative;
+    width: calc(100% - 40px);
+    /* Margem de 20px em cada lado */
+    margin: 0 20px;
+    height: 1.5em;
+    /* Ajuste conforme necessário para garantir que o texto não corte */
+    line-height: 1.5em;
+    /* Ajuste conforme necessário para garantir que o texto não corte */
+}
+
+.marquee::before {
+    content: attr(data-text);
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
         transform: translateX(100%);
-        }
-        100% {
+    }
+
+    100% {
         transform: translateX(-100%);
-        }
-    } 
+    }
+}
 
 /* Media Queries to adjust font size based on the width of the viewport */
 @media (max-width: 1400px) {
@@ -606,6 +618,11 @@ a:hover {
 }
 
 @media (max-width: 991px) {
+    #video,
+    #video .clappr-player {
+        min-height: 350px !important;
+    }
+
     .text-header1 {
         font-size: 26px;
         text-align: center;
@@ -697,6 +714,7 @@ a:hover {
         text-align: center;
         font-size: 22px;
     }
+
     .btn-play-container {
         justify-content: center !important;
         align-items: center !important;
@@ -813,14 +831,14 @@ a:hover {
 /* Track */
 
 ::-webkit-scrollbar-track {
-    background: #ffe30b;
+    background: #ffd100;
 }
 
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-    background: #ffd100;
+    background: var(--confirmation-btn);
 }
 
 
